@@ -1,0 +1,87 @@
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.site-footer {
+  width: 100%;
+  z-index: 99999;
+  background: $color__dark;
+
+  @include bp($mobile__menu-bp) {
+    // background: url('../../assets/backgrounds/park-place-seniors-living-bg-xl-leaf-light.svg');
+    background-repeat: no-repeat;
+    background-size: 280px;
+    background-position: left $base__space-unit bottom $base__space-unit;
+  }
+
+  p,
+  a {
+    margin: 3px 0;
+    color: $color__light;
+  }
+
+  a,
+  p,
+  p > a {
+    text-decoration: none;
+    &:hover {
+      color: $color__info-light;
+    }
+  }
+  a > svg:hover .social-icon {
+    fill: $color__info-light;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+
+    li > a {
+      white-space: nowrap;
+    }
+  }
+  .columns.is-vcentered {
+    width: 100%;
+    @include bp(tablet) {
+      justify-content: space-between;
+    }
+    .column.is-2 {
+      text-align: center;
+      @include bp(tablet) {
+        text-align: unset;
+      }
+    }
+  }
+  .footer-logo-wrapper img {
+    max-width: 140px;
+  }
+}
+
+.site-footer > .content-wrapper {
+  @include bp(tablet) {
+    padding: $base__space-unit;
+  }
+}
+
+.social-icons-wrapper {
+  @include bp(tablet) {
+    margin-bottom: 18px;
+  }
+}
+
+.footer-wrapper {
+  background: $color__dark;
+  @include flex(column, center, center);
+}
+
+.copyright-wrapper {
+  text-align: center;
+
+  @include bp($mobile__menu-bp) {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  p.footer-text {
+    white-space: unset;
+  }
+}

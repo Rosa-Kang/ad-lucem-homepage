@@ -1,0 +1,35 @@
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+
+// Menu Buttons -----------------------------
+.desktop-menu-btn {
+  a,
+  a:visited {
+    background: $color__success;
+    color: $color__light !important;
+    width: 130px;
+    height: 33px;
+    @include col-cen();
+    border-radius: 3px;
+    box-shadow: $box-shadow--btn;
+  }
+
+  a:hover {
+    background: $color__success;
+  }
+}
+
+#wpforms-submit-57,
+.button.is-primary {
+  z-index: 1;
+  border-color: transparent;
+  min-width: 170px;
+  font-family: $font__pre;
+  border-radius: 0;
+  background: $color__info-light;
+  color: $color__light;
+  &:hover {
+    background: $color__info;
+  }
+}

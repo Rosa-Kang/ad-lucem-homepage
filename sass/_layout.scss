@@ -1,0 +1,220 @@
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+section#contact,
+section#about {
+  scroll-margin-top: 9rem;
+}
+
+section#services {
+  scroll-margin-top: 27rem;
+}
+
+.bg-image {
+  // min-height: 40vw;
+  // background: linear-gradient(
+  //   180deg,
+  //   rgba(185, 113, 49, 0.25) 0,
+  //   rgba(185, 113, 49, 0.25)
+  // );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 63% 17%;
+}
+
+#services.bg-image {
+  background-position: 50% 103%;
+}
+// Backgrounds (use Bulma has-background-color) --------------------
+.bg-light-bis {
+  background: $color__light-bis;
+}
+
+.bg-success-dark {
+  background: $color__success;
+}
+
+// Containers ------------------
+.container-sm {
+  margin: 0 auto;
+  max-width: $container-width--sm;
+}
+
+.container-m {
+  margin: 0 auto;
+  max-width: $container-width--m;
+}
+
+.content-wrapper {
+  padding: $base__space-unit;
+}
+
+.content-wrapper {
+  @include bp(tablet) {
+    padding: $space-unit--lg;
+  }
+
+  @include bp(desktop-1920) {
+    padding: $space-unit--xxl;
+  }
+}
+
+.fixed-header {
+  margin-top: $mobile__menu-height;
+
+  @include bp($mobile__menu-bp) {
+    margin-top: $desktop__menu-height;
+  }
+}
+
+// Helpers -----------------------
+.mobile-wrapper {
+  @include bp($mobile__menu-bp) {
+    display: none;
+  }
+}
+
+.desktop-wrapper {
+  display: none;
+
+  @include bp($mobile__menu-bp) {
+    display: block;
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.m-auto {
+  margin: 0 auto;
+}
+
+ul.list-style-none {
+  list-style: none !important;
+  margin: 0 !important;
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -$mobile__menu-height;
+  visibility: hidden;
+
+  @include bp($mobile__menu-bp) {
+    top: -$desktop__menu-height;
+  }
+}
+
+/* Source: https://a11y-101.com/development/skip-link */
+.visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.visually-hidden:focus {
+  clip: auto;
+  height: auto;
+  overflow: auto;
+  position: absolute;
+  width: auto;
+}
+//background
+.sticky-background,
+.normal-background {
+  min-height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sticky-background {
+  background-attachment: fixed;
+}
+
+.normal-background {
+  z-index: -1;
+  margin-top: -190px;
+}
+//info-gallery
+img.info-graphic {
+  position: relative;
+  margin-top: -54px;
+  margin-left: 223px;
+}
+//Accordion section
+.accordion-pair {
+  width: 93%;
+  border-bottom: 1px solid $color__info-light;
+}
+.accordion-title {
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.accordion-detail {
+  padding: 0 0px 32px;
+  width: 60%;
+}
+
+.accordion-closed {
+  &::after {
+    content: '+ SHOW MORE';
+    font-size: 15px;
+    line-height: 30px;
+    position: absolute;
+    font-style: italic;
+    font-weight: $font__weight-semibold;
+    padding-right: 21px;
+    right: 10%;
+  }
+  &:hover:after {
+    color: $color__info-light;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.accordion-opened {
+  &::after {
+    content: '- SHOW LESS';
+    font-size: 15px;
+    line-height: 30px;
+    position: absolute;
+    font-style: italic;
+    font-weight: $font__weight-semibold;
+    padding-right: 21px;
+    right: 10%;
+  }
+  &:hover:after {
+    color: $color__info-light;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+//List-with-Graphic
+.lg-graphic {
+  position: absolute;
+  width: 32vw;
+  right: 64%;
+  bottom: -6%;
+}

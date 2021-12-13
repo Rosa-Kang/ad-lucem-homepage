@@ -1,0 +1,403 @@
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+body,
+input,
+select,
+option,
+textarea {
+  color: $color__text-main;
+  font-family: $font__pre;
+  @include font-size(1);
+  line-height: $font__line-height-body;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
+
+/* Copy */
+
+p {
+  margin-bottom: $base__space-unit;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0 $base__space-unit;
+}
+
+address {
+  margin: 0 0 $base__space-unit;
+}
+
+pre {
+  background: $color__background-pre;
+  font-family: $font__pre;
+  @include font-size(0.9375);
+  line-height: $font__line-height-pre;
+  margin-bottom: 1.6rem;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6rem;
+}
+
+code,
+kbd,
+tt,
+var {
+  font-family: $font__code;
+  @include font-size(0.9375);
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted $color__border-abbr;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: $color__background-ins;
+  text-decoration: none;
+}
+
+big {
+  font-size: 125%;
+}
+
+/**
+ * Google Fonts Example
+ * font-family: 'Lobster', cursive;
+ * font-family: 'Lobster Two', cursive;
+ * font-family: 'Luckiest Guy', cursive;
+*/
+
+// Custom Fonts -----------------------------
+
+.header-2,
+h1,
+h2 {
+  @include font($font__bold, normal, $font__weight-normal);
+}
+
+h1 {
+  color: $color__light-bis;
+  font-size: 33px;
+  line-height: 41px;
+
+  @include bp($mobile__bp) {
+    font-size: 50px;
+    line-height: 62px;
+  }
+
+  @include bp(tablet) {
+    font-size: 70px;
+    line-height: 75px;
+  }
+}
+
+.text-shadow-none {
+  text-shadow: none;
+}
+
+h2,
+.content h2,
+.on-card {
+  font-size: 33px;
+  line-height: 41px;
+  font-weight: $font__weight-normal;
+
+  @include bp(desktop) {
+    font-size: 50px;
+    line-height: 55px;
+  }
+}
+
+h2.is-family-secondary {
+  font-size: 60px;
+  line-height: 1;
+
+  @include bp($mobile__bp) {
+    font-size: 70px;
+    line-height: 84px;
+  }
+}
+
+.has-background-primary h2 {
+  color: $color__light;
+}
+h3.titled,
+h2.titled,
+.has-background-secondary h2,
+.has-background-secondary h3 {
+  font-family: $font__main;
+  color: $color__dark;
+  font-size: 35px;
+  line-height: 40px;
+}
+
+h3.subtitle {
+  color: $color__light-bis;
+  font-family: $font__accent;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: $font__weight-semibold;
+  text-transform: uppercase;
+  margin-bottom: $space-unit--xxs !important;
+
+  @include bp($mobile__bp) {
+    font-size: 30px;
+    line-height: 37px;
+    margin-bottom: $space-unit--xs !important;
+  }
+}
+
+h3,
+.content h3,
+.numeric-pagination li a {
+  color: $color__success-dark;
+  font-size: 25px;
+  line-height: 34px;
+  font-weight: $font__weight-normal;
+  text-transform: lowercase;
+}
+
+h3.is-family-secondary {
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  text-transform: capitalize;
+
+  @include bp($mobile__bp) {
+    font-size: 66px;
+    letter-spacing: 0;
+  }
+}
+
+h4 {
+  color: $color__success-dark;
+  line-height: 25px;
+  font-size: 17px;
+  font-family: $font__main;
+}
+.entry-meta {
+  color: $color__dark;
+  font-size: 18px;
+  line-height: 23px;
+
+  @include bp($mobile__bp) {
+    font-size: 26px;
+    line-height: 33px;
+  }
+}
+
+p {
+  font-family: $font__pre;
+}
+li {
+  @include font($font__main, normal, $font__weight-normal);
+}
+
+p,
+li {
+  color: $color__dark;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+}
+
+a {
+  letter-spacing: 1px;
+}
+
+li {
+  line-height: 2.5;
+}
+
+// Single Posts -----------------------------------
+.single-post {
+  .wp-block-quote {
+    text-align: center;
+    margin-bottom: $base__space-unit;
+
+    p {
+      font-family: $font__bold;
+      font-size: 20px;
+      line-height: 1.5;
+      color: $color__dark;
+    }
+
+    cite {
+      color: $color__dark;
+      text-align: center;
+    }
+
+    cite::before {
+      content: '- ';
+    }
+  }
+
+  figure {
+    text-align: center;
+
+    figcaption {
+      color: $color__dark;
+      font-size: 15px;
+    }
+  }
+}
+
+// Background Variations -----------
+.has-background-primary {
+  h2,
+  h3,
+  p,
+  li,
+  ol,
+  span {
+    color: $color__light;
+  }
+
+  a,
+  a:visited {
+    color: $color__light;
+
+    &:hover {
+      svg,
+      .social-icon {
+        fill: $color__info;
+      }
+    }
+
+    .social-icon {
+      width: 20px;
+      fill: $color__light;
+    }
+  }
+}
+
+.has-background-secondary {
+  background: $color__light;
+  box-shadow: 3px 5px 10px #00000029;
+  border-radius: 10px;
+  opacity: 1;
+  h3,
+  p {
+    color: $color__dark !important;
+  }
+
+  a {
+    font-family: $font__main;
+    font-style: italic;
+    color: $color__success-dark !important;
+
+    &:hover {
+      color: $color__info-light !important;
+    }
+  }
+}
+
+h3 {
+  color: $color__primary-dark;
+}
+.italic-subtitle {
+  font-family: $font__accent;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+// Navigation ----------------------------
+#mobile-menu li a {
+  color: $color__dark;
+  font-family: $font__main;
+  font-size: 23px;
+  line-height: 32px;
+  font-weight: $font__weight-semibold;
+  text-transform: lowercase;
+
+  &:hover {
+    color: $color__success;
+  }
+}
+
+#menu-social-mobile-menu li a {
+  color: $color__dark;
+  font-size: 19px;
+  line-height: 26px;
+
+  &:hover {
+    color: $color__success;
+  }
+}
+
+#primary-menu li a {
+  color: $color__light;
+  font-family: $font__main;
+  font-weight: $font__weight-normal;
+  font-size: 18px;
+  line-height: 24px;
+
+  &:hover {
+    color: $color__info-light;
+  }
+}
+
+#menu-social-menu li a {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: initial;
+}
+
+.contact-menu a {
+  font-weight: $font__weight-semibold;
+}
+
+// Footer -----------------------------------
+.footer-text {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: $font__weight-semibold;
+  white-space: nowrap;
+
+  @include bp(tablet) {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+.privacy-terms-wrapper,
+.copyright-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include bp(tablet) {
+    display: unset;
+  }
+  .footer-text {
+    font-size: 13px;
+    line-height: 18px;
+
+    @include bp(tablet) {
+      font-size: 12px;
+      line-height: 17px;
+    }
+  }
+}

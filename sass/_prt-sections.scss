@@ -1,0 +1,94 @@
+// Intro
+.pb-31vw-desktop {
+  @include bp(desktop) {
+    padding-bottom: 31vw;
+  }
+}
+.intro {
+  .container.content-wrapper.column.is-6 {
+    position: relative;
+  }
+  .intro-graphic {
+    z-index: 0;
+    position: absolute;
+    bottom: -8%;
+    right: -10%;
+    @include bp(tablet) {
+      bottom: -11%;
+      right: 65%;
+    }
+    @include bp(desktop) {
+      bottom: -4%;
+      left: 86%;
+    }
+  }
+  .intro-graphic.left {
+    @include bp(desktop) {
+      bottom: -4%;
+      left: -60%;
+    }
+  }
+}
+
+//Section-left-right
+.section-orientation {
+  .left {
+    order: 1;
+  }
+  .right {
+    order: 2;
+  }
+  .container {
+    position: relative;
+    padding-top: 0;
+    .columns {
+      .left {
+        @include bp(desktop) {
+          height: 100%;
+          width: 60%;
+          object-fit: cover;
+        }
+      }
+
+      .image-container {
+        @include bp(desktop) {
+          margin: -9vw 5% 0 5%;
+          height: 100%;
+          width: 35%;
+          object-fit: cover;
+        }
+      }
+    }
+    .stl-graphic {
+      z-index: 0;
+      position: absolute;
+      bottom: -7%;
+      left: 28%;
+      @include bp(tablet) {
+        bottom: -2%;
+        left: 65%;
+      }
+      @include bp(desktop-1280) {
+        bottom: -1%;
+        left: -11%;
+      }
+    }
+  }
+}
+
+//Contact form
+.has-background-dusk {
+  background: $color__success-dark;
+  h2 {
+    color: $color__light !important;
+  }
+}
+
+//section-list
+.list-items {
+  ul {
+    li {
+      line-height: 22px;
+    }
+  }
+}

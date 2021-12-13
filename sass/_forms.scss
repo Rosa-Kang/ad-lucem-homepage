@@ -1,0 +1,220 @@
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+/* Fields */
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+textarea {
+  color: $color__dark !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: $space-unit--xs $space-unit--s $space-unit--xs $space-unit--s !important;
+  font-size: 16px !important;
+  line-height: 25px !important;
+  box-shadow: none;
+  background: $color__light !important;
+
+  &:focus {
+    color: $color__dark !important;
+  }
+}
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='tel'] {
+  width: 100%;
+  height: auto !important;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  height: 235px !important;
+  margin-bottom: $space-unit--lg !important;
+  padding: $space-unit--xs $space-unit--s $space-unit--xs $space-unit--s !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+label,
+input::placeholder,
+textarea::placeholder {
+  font-family: $font__main;
+  font-size: 16px;
+  line-height: 25px;
+  color: $color__dark;
+}
+
+div.wpforms-container-full .wpforms-form select,
+div.wpforms-container .wpforms-form .choices__inner {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none;
+  background: $color__light !important;
+  padding: $space-unit--xs $space-unit--s $space-unit--xs $space-unit--s !important;
+  height: auto !important;
+}
+
+div.wpforms-container .wpforms-form .choices__list--single {
+  padding: 0 !important;
+}
+
+div.wpforms-container .wpforms-form .choices__placeholder {
+  opacity: 1 !important;
+}
+
+// Contact Form -------------------------------
+/* Hide Google Captcha box */
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+.contact-form,
+.additional-form {
+  div.wpforms-container-full {
+    margin-bottom: 0;
+
+    .wpforms-form input.wpforms-field-medium {
+      max-width: unset;
+    }
+
+    .wpforms-form .wpforms-submit-container {
+      text-align: center;
+      margin-bottom: $base__space-unit !important;
+    }
+  }
+}
+
+.contact-form {
+  .contact-icon {
+    fill: $color__dark;
+  }
+
+  .column:last-child {
+    ul {
+      margin-top: $space-unit--s;
+
+      @include bp(tablet) {
+        margin-top: $space-unit--xxs;
+      }
+    }
+
+    a,
+    a:visited {
+      color: $color__dark;
+
+      &:hover {
+        color: $color__info;
+
+        .contact-icon {
+          fill: $color__info;
+        }
+      }
+    }
+
+    li {
+      margin-bottom: $space-unit--s;
+
+      a {
+        word-break: break-all;
+        align-items: flex-start;
+      }
+    }
+
+    .scaling-svg-container {
+      position: relative;
+      height: 0;
+      width: 24px;
+      padding-bottom: 24px;
+      margin-right: $space-unit--s;
+      flex-shrink: 0;
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.form-graphic {
+  position: relative;
+}
+
+.form-graphic svg {
+  position: absolute;
+  transform: rotate(-2deg);
+  bottom: -120px;
+  left: 50%;
+  margin-left: -231px;
+  z-index: 0;
+}
+
+form#wpforms-form-57 {
+  z-index: 5;
+}
+
+.wpforms-submit-container {
+  z-index: 5;
+}
+
+button#wpforms-submit-57 {
+  position: relative;
+  z-index: 9 !important;
+}
+
+div#wpforms-confirmation-57 {
+  position: relative;
+  z-index: 99 !important;
+}
+
+div.wpforms-container-full .wpforms-form label.wpforms-error {
+  color: $color__info-light !important;
+}
+
+div.wpforms-container-full
+  .wpforms-field.wpforms-field-select-style-classic
+  select {
+  -webkit-border-radius: 0px !important;
+  -webkit-appearance: none !important;
+}
+
+select#wpforms-57-field_3 {
+  height: 49px !important;
+  margin-top: 1.2px;
+}
+
+div#wpforms-57-field_1-container,
+div#wpforms-57-field_2-container,
+div#wpforms-57-field_3-container,
+div#wpforms-57-field_6-container {
+  @media screen and (max-width: 767px) {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+}
+
+div#wpforms-57-field_3-container {
+  margin-bottom: 10px;
+}
+
+img#__lpform_wpforms-57-field_1_icon {
+  display: none;
+}
+
+.aos-init.aos-animate {
+  position: relative;
+  z-index: 10;
+}
