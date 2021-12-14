@@ -203,6 +203,22 @@
 }
 
 // Desktop ------------------------
+li#menu-item-357,
+li#menu-item-355,
+li#menu-item-356,
+li#menu-item-354,
+li#menu-item-353 {
+  padding-left: 43px;
+  a {
+    margin-left: 0;
+    font-size: 12px;
+  }
+}
+
+li#menu-item-360::after {
+  content: '';
+  background-image: url('../assets/svg/angle-down.svg');
+}
 .desktop-menu-wrapper {
   display: none;
 
@@ -312,9 +328,9 @@
 
 // Menu item with children ----------------
 li.menu-item-has-children {
-  position: relative;
-  @include flex(row, flex-start, center);
-  flex-wrap: wrap;
+  // position: relative;
+  // @include flex(row, flex-start, center);
+  // flex-wrap: wrap;
 
   @include bp($mobile__menu-bp) {
     // padding-right: $space-unit--xl + $space-unit--xxs;
@@ -347,7 +363,7 @@ li.menu-item-has-children {
 
     @include bp($mobile__menu-bp) {
       order: unset;
-      width: 125px;
+      width: 212px;
       background: $color__dark;
       box-shadow: $box-shadow--2;
       padding: $space-unit--xxs $space-unit--xs;
@@ -363,7 +379,7 @@ li.menu-item-has-children {
       padding: 2rem 0 0 0;
 
       @include bp($mobile__menu-bp) {
-        margin-left: 0;
+        margin-left: 5px;
         width: 100%;
         text-align: center;
         padding: $space-unit--xxs 0;
@@ -372,7 +388,8 @@ li.menu-item-has-children {
       a {
         @include bp($mobile__menu-bp) {
           color: $color__dark;
-          margin-left: 0;
+          margin-left: 24px;
+          text-align: left;
 
           &:hover {
             color: $color__info;
