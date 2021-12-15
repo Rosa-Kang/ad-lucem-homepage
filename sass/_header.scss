@@ -309,6 +309,9 @@ li#menu-item-360::after {
   padding-top: $banner__menu-height;
   @include row-cen();
 
+  li .sub-menu li:hover:after {
+    left: -45px;
+  }
   li {
     position: relative;
 

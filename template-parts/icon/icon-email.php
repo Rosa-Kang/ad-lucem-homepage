@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for displaying icon - email.
  *
@@ -7,4 +8,22 @@
 
 ?>
 
-<svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100%" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path class="contact-icon" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+<svg width="21" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.9 100.89">
+  <defs>
+    <style>
+    .cls-1 {
+      fill: #efaf42;
+    }
+    </style>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g id="Group_59" data-name="Group 59">
+        <path class="cls-1"
+          d="M50.44,75.27a24.84,24.84,0,1,1,0-49.67c12.39,0,18.1,2.75,23.31,7.19a4.35,4.35,0,0,1-5.65,6.62c-3.27-2.8-6.86-5.11-17.66-5.11A16.14,16.14,0,1,0,66.57,50.44a4.35,4.35,0,0,1,8.7,0A24.86,24.86,0,0,1,50.44,75.27Z" />
+        <path class="cls-1"
+          d="M50.45,100.89a50.45,50.45,0,1,1,50.44-50.44v7.79A17.14,17.14,0,0,1,84.07,75.63a17.55,17.55,0,0,1-12.23-4.79,17.08,17.08,0,0,1-5.25-12v-.68a4.35,4.35,0,1,1,8.7.24,8.45,8.45,0,0,0,8.61,8.57,8.45,8.45,0,0,0,8.29-8.6V50.45A41.75,41.75,0,1,0,50.45,92.19a4.35,4.35,0,0,1,0,8.7Z" />
+      </g>
+    </g>
+  </g>
+</svg>

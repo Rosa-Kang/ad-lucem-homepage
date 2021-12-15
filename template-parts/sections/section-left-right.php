@@ -37,7 +37,7 @@ if ($sl_bg_image) {
 ?>
 <section style="background-image: url('<?php echo $sl_bg_image_url; ?>');" class="section-orientation bg-image">
   <div class="container content-wrapper">
-    <div class="columns">
+    <div class="columns  is-flex">
       <div class="column is-6-desktop is-6-widescreen text-container <?php echo $sl_orientation; ?>">
         <h3 data-aos="fade-right" data-aos-duration="1000" class="italic-subtitle is-capitalized has-text-info-light">
           <?php echo $sl_subheadline ?></h3>

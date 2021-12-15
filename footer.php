@@ -39,8 +39,8 @@ if ($logo) {
         <div class="copyright-wrapper has-text-center mt-4">
           <p class="footer-text is-capitalized"><a href="privacy-policy">Privacy
               Policy</a></p>
-          <p class="is-capitalized">copyright@<?php echo date('Y'); ?> Ad Lucem Law Corporation.&nbsp;<a
-              href="https://whitecanvasdesign.ca" target="_blank" rel="noopener noreferrer">Website design by
+          <p class="is-capitalized">copyright@<?php echo date('Y'); ?> Ad Lucem Law&nbsp;<a
+              href="https://whitecanvasdesign.ca" target="_blank" rel="noopener noreferrer">Website by
               White Canvas
               Design.</a>
           </p>

@@ -20,16 +20,15 @@
   }
 }
 
-#wpforms-submit-57,
 .button.is-primary {
   z-index: 1;
-  border-color: transparent;
+  border-color: transparent !important;
   min-width: 170px;
   font-family: $font__pre;
   border-radius: 0;
-  background: $color__info-light;
-  color: $color__light;
+  background: $color__info-light !important;
+  color: $color__light !important;
   &:hover {
-    background: $color__info;
+    background: $color__info !important;
   }
 }

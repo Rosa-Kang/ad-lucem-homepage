@@ -25,12 +25,12 @@ $clients = get_posts($args);
 <section class="our-clients-slider pt-3">
   <div class="container content-wrapper has-text-centered ">
     <?php if ($title) : ?>
-    <h3 data-aos="fade-down" class="italic-subtitle is-capitalized has-text-info-light"><?php echo $subtitle; ?></h3>
+    <h3 data-aos="fade-down" class="italic-subtitle is-capitalized "><?php echo $subtitle; ?></h3>
     <h2 data-aos="fade-up"> <?php echo $title; ?> </h2>
     <?php endif; ?>
   </div><!-- .container -->
 
-  <div class="container content-wrapper pt-0 pb-6">
+  <div data-aos="fade-down" data-aos-delay="400" data-aos-duration="2000" class="container content-wrapper pt-0 pb-6">
     <div class="mx-6">
       <div class="swiper-container clientSwiper">
         <ul class="swiper-wrapper list-style-none is-align-items-center">
@@ -47,7 +47,7 @@ $clients = get_posts($args);
             <a href="<?php echo esc_url($link_url); ?>" target=" <?php echo esc_attr($link_target); ?>"
               rel="noreferrer noopener">
 
-              <figure data-aos="fade-down" class="image mx-0 mb-0">
+              <figure class="image mx-0 mb-0">
                 <?php echo $client_logo; ?>
               </figure>
             </a>

@@ -1,20 +1,31 @@
 // Intro
-.pb-31vw-desktop {
-  @include bp(desktop) {
+.pb-extra {
+  padding-bottom: 66vw;
+  @include bp(tablet) {
     padding-bottom: 31vw;
+  }
+  @include bp(desktop-1080) {
+    padding-bottom: 46vw;
+  }
+  @include bp(desktop-1280) {
+    padding-bottom: 33vw;
+  }
+  @include bp(desktop-1440) {
+    padding-bottom: 26vw;
   }
 }
 .intro {
   .container.content-wrapper.column.is-6 {
+    margin-bottom: 16rem;
     position: relative;
   }
   .intro-graphic {
     z-index: 0;
     position: absolute;
-    bottom: -8%;
-    right: -10%;
+    bottom: -16%;
+    left: 0%;
     @include bp(tablet) {
-      bottom: -11%;
+      bottom: -16%;
       right: 65%;
     }
     @include bp(desktop) {
@@ -32,11 +43,29 @@
 
 //Section-left-right
 .section-orientation {
+  margin-bottom: 45vw;
+  @include bp(tablet) {
+    margin-bottom: 0;
+  }
+  .is-flex {
+    flex-direction: column;
+    @include bp(tablet) {
+      flex-direction: row;
+    }
+  }
   .left {
-    order: 1;
+    order: 2;
+    margin-top: 36px;
+    @include bp(tablet) {
+      order: 1;
+      margin-top: 0;
+    }
   }
   .right {
-    order: 2;
+    order: 1;
+    @include bp(tablet) {
+      order: 2;
+    }
   }
   .container {
     position: relative;
@@ -51,26 +80,32 @@
       }
 
       .image-container {
-        @include bp(desktop) {
-          margin: -9vw 5% 0 5%;
-          height: 100%;
-          width: 35%;
+        margin-top: 6rem;
+        @include bp(tablet) {
+          margin: -12vw 0 0;
+        }
+        img {
+          width: 100%;
+          height: 90%;
           object-fit: cover;
+          @include bp(tablet) {
+            height: 540px;
+            width: 435px;
+          }
         }
       }
     }
     .stl-graphic {
       z-index: 0;
       position: absolute;
-      bottom: -7%;
-      left: 28%;
+      bottom: -12%;
+      right: -18%;
       @include bp(tablet) {
-        bottom: -2%;
-        left: 65%;
+        bottom: -18%;
+        right: 38%;
       }
-      @include bp(desktop-1280) {
-        bottom: -1%;
-        left: -11%;
+      @include bp(desktop) {
+        left: -7%;
       }
     }
   }
@@ -89,6 +124,54 @@
   ul {
     li {
       line-height: 22px;
+    }
+  }
+}
+
+//section-contact-page &  Map
+.map {
+  height: 450px;
+  position: relative;
+  z-index: 9;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+
+  @include bp(tablet) {
+    margin-top: -100px;
+  }
+
+  @include bp(desktop) {
+    margin-top: -200px;
+  }
+}
+.section-contact {
+  .icon-pin {
+    position: relative;
+    top: -24px;
+  }
+  .address {
+    overflow-wrap: break-word;
+    max-width: 280px;
+    display: inline-block;
+  }
+  .wpforms-container input,
+  .wpforms-container textarea,
+  .wpforms-container select {
+    box-shadow: $box_shadow;
+    &::placeholder {
+      font-family: $font__pre;
+    }
+  }
+  .graphic-contact-page {
+    z-index: 0;
+    img {
+      width: 616px;
+      position: relative;
+      top: 43px;
+      left: -218px;
     }
   }
 }

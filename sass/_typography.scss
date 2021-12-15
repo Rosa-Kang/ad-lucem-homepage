@@ -97,8 +97,8 @@ h2 {
 
 h1 {
   color: $color__light-bis;
-  font-size: 33px;
-  line-height: 41px;
+  font-size: 45px;
+  line-height: 50px;
 
   @include bp($mobile__bp) {
     font-size: 50px;
@@ -118,13 +118,15 @@ h1 {
 h2,
 .content h2,
 .on-card {
-  font-size: 33px;
-  line-height: 41px;
+  font-size: 35px;
+  line-height: 52px;
+  margin-bottom: 23px;
   font-weight: $font__weight-normal;
 
   @include bp(desktop) {
+    margin-bottom: 28px;
     font-size: 50px;
-    line-height: 55px;
+    line-height: 74px;
   }
 }
 
@@ -149,6 +151,22 @@ h2.titled,
   color: $color__dark;
   font-size: 35px;
   line-height: 40px;
+}
+
+.subheadline {
+  color: $color__light-bis;
+  font-family: $font__accent;
+  font-style: italic;
+  font-size: 25px;
+  line-height: 38px;
+}
+
+h2.subtitled {
+  color: $color__info-light;
+  font-family: $font__accent;
+  font-style: italic;
+  font-size: 23px;
+  line-height: 34px;
 }
 
 h3.subtitle {
@@ -313,14 +331,15 @@ li {
   }
 }
 
-h3 {
-  color: $color__primary-dark;
-}
 .italic-subtitle {
   font-family: $font__accent;
   font-style: italic;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 34px;
+  @include bp(tablet) {
+    font-size: 23px;
+    line-height: 34px;
+  }
 }
 
 // Navigation ----------------------------
