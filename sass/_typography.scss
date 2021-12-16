@@ -117,7 +117,7 @@ h1 {
 
 h2,
 .content h2,
-.on-card {
+.has-background-secondary h3 .on-card {
   font-size: 35px;
   line-height: 52px;
   margin-bottom: 23px;
@@ -208,7 +208,8 @@ h3.is-family-secondary {
   }
 }
 
-h4 {
+h4,
+.schema-faq-question {
   color: $color__success-dark;
   line-height: 25px;
   font-size: 17px;
@@ -319,15 +320,16 @@ li {
   p {
     color: $color__dark !important;
   }
+}
+.has-background-secondary a,
+a.card-anchor {
+  font-family: $font__main;
+  font-style: italic;
+  font-weight: $font__weight-semibold;
+  color: $color__success-dark !important;
 
-  a {
-    font-family: $font__main;
-    font-style: italic;
-    color: $color__success-dark !important;
-
-    &:hover {
-      color: $color__info-light !important;
-    }
+  &:hover {
+    color: $color__info-light !important;
   }
 }
 
@@ -344,12 +346,12 @@ li {
 
 // Navigation ----------------------------
 #mobile-menu li a {
-  color: $color__dark;
+  color: $color__light;
   font-family: $font__main;
   font-size: 23px;
   line-height: 32px;
   font-weight: $font__weight-semibold;
-  text-transform: lowercase;
+  text-transform: capitalize;
 
   &:hover {
     color: $color__success;
@@ -357,12 +359,12 @@ li {
 }
 
 #menu-social-mobile-menu li a {
-  color: $color__dark;
+  color: $color__light;
   font-size: 19px;
   line-height: 26px;
 
   &:hover {
-    color: $color__success;
+    color: $color__info-light;
   }
 }
 

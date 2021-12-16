@@ -152,9 +152,9 @@
 .popout-menu {
   width: $mobile__menu-width;
   height: 100%;
-  background: $color__light;
+  background: $color__dark;
   @include flex(column, unset, flex-start);
-  color: $color__dark;
+  color: $color__light;
   overflow-x: hidden;
   overflow-y: auto;
 

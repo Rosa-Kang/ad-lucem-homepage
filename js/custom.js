@@ -43,6 +43,25 @@
     }
   }); // End of Accordion Repeater -------------------
 
+  // Start of FAQ Accordion --------------------
+  $('.schema-faq').addClass('accordion-pair my-5');
+  $('.schema-faq-answer').css('display', 'none');
+  $('.schema-faq-question').addClass('py-5 faq-closed');
+  $('.schema-faq-question').click(function () {
+    if ($(this).next().is(':visible')) {
+      $(this).next().slideUp();
+      $(this).removeClass('faq-opened');
+      $(this).addClass('faq-closed');
+    } else {
+      $('.schema-faq-answer').slideUp();
+      $(this).removeClass('faq-closed');
+      $(this).next().slideDown();
+      $(this).addClass('faq-opened');
+      $('.schema-faq-question').not(this).removeClass('faq-opened');
+      $('.schema-faq-question').not(this).addClass('faq-closed');
+    }
+  }); // End of FAQ Accordion ----------------
+
   // Start of Show More Button (Resources Page) -------------------
   $('.blog article').hide().slice(0, 4).show();
 
@@ -64,5 +83,5 @@
     if ($('.bulletins li:hidden').length === 0) {
       $('#loadMore').replaceWith("<p class='text-btn'>no more</p>");
     }
-  }); // End of Show More Button-------------------
+  }); // End of Doc Ready -------------------
 })(jQuery);

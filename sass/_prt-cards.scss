@@ -8,10 +8,8 @@
   -webkit-line-clamp: 4; /* number of lines to show */
   -webkit-box-orient: vertical;
 }
-.cards {
-  padding-top: 80px;
-  padding-bottom: 80px;
 
+.cards {
   h3.is-capitalized.mb-3 {
     margin: 0.75rem 0;
     position: relative;
@@ -39,7 +37,7 @@
   }
 
   .column.is-4.has-background-secondary.m-3 {
-    padding: 2rem;
+    padding: 2.1rem;
     @include bp(tablet) {
       justify-content: space-between;
       display: flex;
@@ -67,9 +65,12 @@
     .column.is-4.has-background-secondary.m-3:first-child,
   .columns.is-justify-content-center
     .column.is-4.has-background-secondary.m-3:last-child {
-    @include bp(desktop-1080) {
+    @include bp(tablet) {
       position: relative;
-      top: -150px;
+      top: -12vw;
+    }
+    @include bp(desktop-1280) {
+      top: -7vw;
     }
   }
 }

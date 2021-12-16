@@ -214,7 +214,9 @@ img#__lpform_wpforms-57-field_1_icon {
   display: none;
 }
 
-.aos-init.aos-animate {
-  position: relative;
-  z-index: 10;
+section#contact {
+  .aos-init.aos-animate {
+    position: relative;
+    z-index: 10;
+  }
 }

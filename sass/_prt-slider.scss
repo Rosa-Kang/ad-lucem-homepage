@@ -10,10 +10,19 @@
     }
   }
 }
+
+// ul.swiper-wrapper li {
+//   @media screen and (max: 768px) {
+//     width: 113px !important;
+//     margin-right: 45px !important;
+//   }
+// }
+
 img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
-  height: 82px;
-  width: auto;
+  height: auto;
+  width: 152px;
   object-fit: contain;
+  margin: 0 auto;
 }
 .swiper-button-prev {
   height: 18px !important;

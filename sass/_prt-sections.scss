@@ -1,8 +1,8 @@
 // Intro
 .pb-extra {
-  padding-bottom: 66vw;
+  padding-bottom: 180vw;
   @include bp(tablet) {
-    padding-bottom: 31vw;
+    padding-bottom: 79vw;
   }
   @include bp(desktop-1080) {
     padding-bottom: 46vw;
@@ -11,7 +11,7 @@
     padding-bottom: 33vw;
   }
   @include bp(desktop-1440) {
-    padding-bottom: 26vw;
+    padding-bottom: 29vw;
   }
 }
 .intro {
@@ -41,7 +41,52 @@
   }
 }
 
-//Section-left-right
+//Section-cards
+section#services .container {
+  margin-top: -140vw;
+
+  @include bp(tablet) {
+    margin-top: -63vw;
+  }
+
+  @include bp(desktop-1080) {
+    margin-top: -30vw;
+  }
+  @include bp(desktop-1280) {
+    margin-top: -25vw;
+  }
+}
+
+.pb-extra-sm {
+  padding-bottom: 90vw;
+
+  @include bp(tablet) {
+    padding-bottom: 20vw;
+  }
+}
+
+//Section-orientation
+section#orientation.bg-image {
+  margin-bottom: 0;
+  .container {
+    margin-top: 0;
+    .image-container {
+      @include bp(tablet) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+section#orientation .container {
+  margin-top: -90vw;
+  @include bp(tablet) {
+    margin-top: -6vw;
+  }
+  @include bp(desktop-1280) {
+    margin-top: 0vw;
+  }
+}
 .section-orientation {
   margin-bottom: 45vw;
   @include bp(tablet) {
@@ -54,7 +99,7 @@
     }
   }
   .left {
-    order: 2;
+    order: 3;
     margin-top: 36px;
     @include bp(tablet) {
       order: 1;
@@ -64,7 +109,7 @@
   .right {
     order: 1;
     @include bp(tablet) {
-      order: 2;
+      order: 3;
     }
   }
   .container {
@@ -84,6 +129,9 @@
         @include bp(tablet) {
           margin: -12vw 0 0;
         }
+        // @include bp(desktop-1280) {
+        //   margin: -9vw 0 0;
+        // }
         img {
           width: 100%;
           height: 90%;

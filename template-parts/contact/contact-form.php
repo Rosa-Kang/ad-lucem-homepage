@@ -23,7 +23,7 @@ if ($graphic) {
 ?>
 <section id="contact" class="contact-form wrapper py-6 px-5 has-background-dusk">
   <div class="container-sm pt-4 pb-6 has-text-centered">
-    <h2 data-aos="fade-up" class="mb-4"><?php echo $title; ?></h2>
+    <h2 data-aos="fade-right" class="mb-4"><?php echo $title; ?></h2>
     <div data-aos="fade-up"><?php echo do_shortcode($shortcode); ?></div>
     <div class="form-graphic">
       <?php get_template_part('template-parts/graphic/peacock'); ?>
