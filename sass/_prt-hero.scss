@@ -2,12 +2,27 @@
 # Hero
 --------------------------------------------------------------*/
 .hero {
-  min-height: 30vw;
-  h3,
-  h1 {
-    text-shadow: $text-shadow;
-    @include bp(tablet) {
-      margin-left: 4rem;
+  .py-6 {
+    padding-bottom: 0 !important;
+    .text-container {
+      padding-top: 17rem;
+      @include bp(desktop-1280) {
+        padding-top: 6rem;
+      }
+      h3,
+      h1 {
+        padding-left: 1rem;
+        color: $color__dark;
+        text-shadow: $text-shadow;
+        background: $color__light-bis;
+        @include bp(tablet) {
+          margin-left: 4rem;
+        }
+
+        @include bp(desktop-1280) {
+          margin-left: 76px;
+        }
+      }
     }
   }
 }

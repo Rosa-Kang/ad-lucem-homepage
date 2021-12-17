@@ -23,7 +23,7 @@ $args = array(
 $clients = get_posts($args);
 ?>
 <section class="our-clients-slider">
-  <div class="container content-wrapper has-text-centered ">
+  <div class="has-text-centered ">
     <?php if ($title) : ?>
     <h3 data-aos="fade-right" data-aos-delay="500" class="italic-subtitle is-capitalized"><?php echo $subtitle; ?></h3>
     <h2 class="mb-0" data-aos="fade-right" data-aos-delay="500"> <?php echo $title; ?> </h2>

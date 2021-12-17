@@ -8,10 +8,10 @@
     padding-bottom: 46vw;
   }
   @include bp(desktop-1280) {
-    padding-bottom: 33vw;
+    padding-bottom: 23vw;
   }
   @include bp(desktop-1440) {
-    padding-bottom: 29vw;
+    padding-bottom: 24rem;
   }
 }
 .intro {
@@ -28,9 +28,9 @@
       bottom: -16%;
       right: 65%;
     }
-    @include bp(desktop) {
-      bottom: -4%;
-      left: 86%;
+    @include bp(desktop-1280) {
+      bottom: 4%;
+      left: 72%;
     }
   }
   .intro-graphic.left {
@@ -53,31 +53,74 @@ section#services .container {
     margin-top: -30vw;
   }
   @include bp(desktop-1280) {
-    margin-top: -25vw;
+    margin-top: -31vw;
+  }
+  @include bp(desktop-1440) {
+    margin-top: -24rem;
   }
 }
 
 .pb-extra-sm {
-  padding-bottom: 90vw;
+  padding-bottom: 28rem;
 
   @include bp(tablet) {
     padding-bottom: 20vw;
   }
+  @include bp(desktop-1080) {
+    padding-bottom: 23rem;
+  }
+}
+
+//Section Modal
+.modal-card {
+  margin-top: 131px;
+  margin-bottom: 109px;
+  border-radius: 10px;
+  section.modal-card-body {
+    position: relative;
+    a.modal-close.is-shadowless {
+      position: absolute;
+      top: 42px;
+      right: 42px;
+      svg {
+        fill: $color__info-light;
+        &:hover {
+          fill: $color__info-dark;
+        }
+      }
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    .modal-close::before,
+    .modal-close::after {
+      display: none;
+    }
+  }
 }
 
 //Section-orientation
+//Orientation with bg-image
 section#orientation.bg-image {
   margin-bottom: 0;
   .container {
     margin-top: 0;
     .image-container {
-      @include bp(tablet) {
-        margin-top: 0;
+      img {
+        @include bp(tablet) {
+          margin-top: -5vw;
+          width: 90%;
+          height: auto;
+        }
+        @include bp(desktop) {
+          margin-top: -14vw;
+        }
       }
     }
   }
 }
 
+//Orientation w/o bg-image
 section#orientation .container {
   margin-top: -90vw;
   @include bp(tablet) {
@@ -88,18 +131,26 @@ section#orientation .container {
   }
 }
 .section-orientation {
-  margin-bottom: 45vw;
+  margin-bottom: 10vw;
   @include bp(tablet) {
     margin-bottom: 0;
   }
   .is-flex {
+    width: 95%;
+    margin: 0 auto;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     @include bp(tablet) {
       flex-direction: row;
+      width: 100%;
+    }
+    @include bp(desktop-1280) {
+      align-items: flex-start;
     }
   }
   .left {
-    order: 3;
+    order: 2;
     margin-top: 36px;
     @include bp(tablet) {
       order: 1;
@@ -109,7 +160,7 @@ section#orientation .container {
   .right {
     order: 1;
     @include bp(tablet) {
-      order: 3;
+      order: 2;
     }
   }
   .container {
@@ -125,20 +176,23 @@ section#orientation .container {
       }
 
       .image-container {
-        margin-top: 6rem;
-        @include bp(tablet) {
-          margin: -12vw 0 0;
-        }
-        // @include bp(desktop-1280) {
-        //   margin: -9vw 0 0;
-        // }
+        margin: 6rem auto 0;
         img {
-          width: 100%;
-          height: 90%;
+          min-height: 80vw;
+          width: auto;
+          margin: 4rem 0 0 0;
           object-fit: cover;
           @include bp(tablet) {
-            height: 540px;
-            width: 435px;
+            min-height: 50vw;
+            width: 100%;
+            height: auto;
+            margin: -16rem 0 0 2vw;
+          }
+          @include bp(desktop-1280) {
+            min-height: 35vw;
+            width: 82%;
+            margin-left: 8vw;
+            margin-top: -16rem;
           }
         }
       }
@@ -152,8 +206,13 @@ section#orientation .container {
         bottom: -18%;
         right: 38%;
       }
-      @include bp(desktop) {
-        left: -7%;
+      @include bp(desktop-1280) {
+        bottom: -29%;
+        left: -6%;
+      }
+      @include bp(desktop-1440) {
+        bottom: -15%;
+        left: -6%;
       }
     }
   }

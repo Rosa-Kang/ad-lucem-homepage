@@ -44,7 +44,7 @@ if ($sl_bg_image) {
   <div class="container content-wrapper">
     <div class="columns is-flex">
 
-      <div class="column  text-container <?php echo $sl_orientation; ?>">
+      <div class="column text-container <?php echo $sl_orientation; ?>">
         <h3 data-aos="fade-right" data-aos-duration="1000" class="italic-subtitle is-capitalized has-text-info-light">
           <?php echo $sl_subheadline ?></h3>
         <h2 data-aos="fade-right" data-aos-duration="2000"><?php echo $sl_title ?></h2>
@@ -52,10 +52,14 @@ if ($sl_bg_image) {
           <?php echo $sl_content; ?></p>
         <?php if ($sl_button_label) { ?>
         <a data-aos="fade-right" class="is-uppercase <?php if ($sl_bg_image_url) {
-                                                          echo 'card-anchor';
+                                                          echo 'card-anchor show-modal-btn';
                                                         } else {
                                                           echo 'button is-primary';
-                                                        } ?> " href="<?php echo $sl_button_link ?>">
+                                                        } ?> " href="<?php if ($sl_bg_image_url) {
+                                                                        echo "#";
+                                                                      } else {
+                                                                        echo $sl_button_link;
+                                                                      } ?>">
           <?php echo $sl_button_label ?>
         </a>
         <?php } ?>

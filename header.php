@@ -7,6 +7,7 @@
  */
 
 ?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -31,8 +32,8 @@
       </div><!-- .site-branding -->
 
       <nav id="site-navigation" class="main-navigation" role="navigation">
+        <?php get_template_part('template-parts/top-bar/top-bar'); ?>
         <div class="main-navigation-container container content-wrapper py-0">
-
           <div class="mobile-menu-wrapper">
             <?php get_template_part('template-parts/logo/logo'); ?>
             <button class="menu-bars" id="menu-bars" aria-label="Menu">

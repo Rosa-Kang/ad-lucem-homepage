@@ -11,12 +11,6 @@ section {
 //   scroll-margin-top: 9rem;
 // }
 
-body.home .hero {
-  @include bp(desktop) {
-    height: 55vw;
-  }
-}
-
 .bg-image {
   // min-height: 40vw;
   // background: linear-gradient(

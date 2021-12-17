@@ -19,8 +19,8 @@
 // }
 
 img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
-  height: auto;
-  width: 152px;
+  max-height: 100px;
+  width: 182px;
   object-fit: contain;
   margin: 0 auto;
 }

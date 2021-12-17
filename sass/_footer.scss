@@ -4,7 +4,7 @@
 
 .site-footer {
   width: 100%;
-  z-index: 99999;
+  z-index: 99;
   background: $color__dark;
 
   @include bp($mobile__menu-bp) {
