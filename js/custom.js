@@ -70,7 +70,9 @@
       e.preventDefault();
       $('article:hidden').slice(0, 4).show();
       if ($('article:hidden').length === 0) {
-        $('#loadMore').replaceWith('<p class="is-uppercase">no more</p>');
+        $('#loadMore').replaceWith(
+          '<p class="button is-primary is-uppercase">no more</p>'
+        );
       }
     });
 

@@ -8,7 +8,7 @@
 
 ?>
 
-<div class="has-text-centered mb-6">
-  <a class="show-more text-btn is-uppercase" id="loadMore" href="#" onClick="return false;">show
+<div class="show-more has-text-centered my-6">
+  <a class="button is-primary show-more text-btn is-uppercase" id="loadMore" href="#" onClick="return false;">show
     more</a>
 </div>

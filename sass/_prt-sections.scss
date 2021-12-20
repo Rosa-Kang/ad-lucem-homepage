@@ -15,6 +15,24 @@
   }
 }
 .intro {
+  position: relative;
+  .intro-graphic {
+    img {
+      position: absolute;
+      @include bp(tablet) {
+        width: 100%;
+        left: -50%;
+        bottom: -4rem;
+      }
+
+      @include bp(desktop-1280) {
+        width: 69%;
+        left: -25%;
+        bottom: -10rem;
+      }
+    }
+  }
+
   .container.content-wrapper.column.is-6 {
     margin-bottom: 16rem;
     position: relative;
@@ -34,9 +52,9 @@
     }
   }
   .intro-graphic.left {
-    @include bp(desktop) {
-      bottom: -4%;
-      left: -60%;
+    @include bp(desktop-1280) {
+      bottom: -5%;
+      left: -34%;
     }
   }
 }
@@ -104,16 +122,39 @@ section#services .container {
 section#orientation.bg-image {
   margin-bottom: 0;
   .container {
+    @include bp(tablet) {
+      padding-bottom: 0;
+    }
     margin-top: 0;
-    .image-container {
-      img {
-        @include bp(tablet) {
-          margin-top: -5vw;
-          width: 90%;
-          height: auto;
+    .text-container {
+      .text-content {
+        p {
+          @include bp(tablet) {
+            height: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          @include bp(desktop-1280) {
+            height: 173px;
+          }
+          @include bp(desktop-1440) {
+            height: 245px;
+          }
         }
-        @include bp(desktop) {
-          margin-top: -14vw;
+      }
+    }
+    .image-container {
+      margin: 0;
+      img {
+        height: 100%;
+        width: auto;
+        @include bp(tablet) {
+          height: 517px;
+          margin: -10rem 3rem 0 0;
+        }
+        @include bp(desktop-1280) {
+          height: 572px;
+          margin: -9rem 0 0 0;
         }
       }
     }
@@ -122,16 +163,13 @@ section#orientation.bg-image {
 
 //Orientation w/o bg-image
 section#orientation .container {
-  margin-top: -90vw;
   @include bp(tablet) {
-    margin-top: -6vw;
-  }
-  @include bp(desktop-1280) {
-    margin-top: 0vw;
+    margin-top: 0;
   }
 }
 .section-orientation {
   margin-bottom: 10vw;
+  position: relative;
   @include bp(tablet) {
     margin-bottom: 0;
   }
@@ -144,9 +182,6 @@ section#orientation .container {
     @include bp(tablet) {
       flex-direction: row;
       width: 100%;
-    }
-    @include bp(desktop-1280) {
-      align-items: flex-start;
     }
   }
   .left {
@@ -175,25 +210,41 @@ section#orientation .container {
         }
       }
 
-      .image-container {
-        margin: 6rem auto 0;
+      .image-container.left {
         img {
-          min-height: 80vw;
+          margin: 0;
+          @include bp(tablet) {
+            margin: 0 3rem 0 0;
+          }
+        }
+      }
+
+      .image-container {
+        img {
+          margin-top: -11rem;
+          height: 319px;
           width: auto;
-          margin: 4rem 0 0 0;
           object-fit: cover;
           @include bp(tablet) {
-            min-height: 50vw;
-            width: 100%;
-            height: auto;
-            margin: -16rem 0 0 2vw;
+            width: auto;
+            height: 30rem;
+            margin: -11rem 0 0 1rem;
           }
           @include bp(desktop-1280) {
-            min-height: 35vw;
-            width: 82%;
-            margin-left: 8vw;
-            margin-top: -16rem;
+            width: 85%;
+            height: 34rem;
+            margin-left: 3rem;
+            margin-top: -15rem;
           }
+        }
+      }
+      div#without-graphic img {
+        margin-top: -5rem;
+        @include bp(tablet) {
+          margin-top: 1rem;
+        }
+        @include bp(desktop-1280) {
+          margin-top: 0rem;
         }
       }
     }
@@ -207,11 +258,11 @@ section#orientation .container {
         right: 38%;
       }
       @include bp(desktop-1280) {
-        bottom: -29%;
+        bottom: -19%;
         left: -6%;
       }
       @include bp(desktop-1440) {
-        bottom: -15%;
+        bottom: -11%;
         left: -6%;
       }
     }
@@ -279,6 +330,26 @@ section#orientation .container {
       position: relative;
       top: 43px;
       left: -218px;
+    }
+  }
+}
+//List-graphic
+section.section-list-graphic {
+  position: relative;
+  .lg-graphic {
+    svg {
+      position: absolute;
+      top: 134px;
+      left: -204px;
+      @include bp(tablet) {
+        top: 443px;
+        left: -28px;
+      }
+
+      @include bp(desktop-1280) {
+        top: 188px;
+        left: -188px;
+      }
     }
   }
 }

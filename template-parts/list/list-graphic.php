@@ -45,8 +45,12 @@ if ($lg_graphic) {
       </ul>
     </div>
   </div>
-  <div class="lg-graphic">
-    <?php get_template_part('template-parts/graphic/brief-sun'); ?>
+  <div data-aos="zoom-in" data-aos-delay="200" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+    class="lg-graphic">
+    <?php if ($lg_graphic) : ?>
+    <img src="<?= $lg_url; ?>" alt="<? $lg_alt; ?>">
+    <?php else : ?> <?php get_template_part("template-parts/graphic/mountain"); ?>
+    <?php endif; ?>
   </div>
 
 </section>

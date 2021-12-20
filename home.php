@@ -36,7 +36,7 @@ get_header(); ?>
       endif;
 
       ?>
-      <?php get_template_part('template-parts/section/button-show-more'); ?>
+      <?php get_template_part('template-parts/sections/button-show-more'); ?>
     </div>
   </div>
 </section>

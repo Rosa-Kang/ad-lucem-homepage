@@ -36,6 +36,9 @@ em,
 i {
   font-style: italic;
 }
+section li {
+  line-height: 2;
+}
 
 blockquote {
   margin: 0 $base__space-unit;
@@ -166,7 +169,7 @@ h2.titled,
     line-height: 50px;
     @include bp(desktop-1280) {
       font-size: 78px;
-      line-height: 85px;
+      line-height: 91px;
     }
   }
 }

@@ -40,17 +40,16 @@ if ($intro_graphic) {
         <?php echo $intro_button_label ?>
       </a>
     </div>
-    <?php
-    if ($intro_graphic) {
-    ?>
     <div data-aos="fade-left" data-aos-duration="2000" class="intro-graphic
     <?php if ($graphic_orientation == 'left') {
-        echo 'left';
-      } ?>
+      echo 'left';
+    } ?>
     ">
-      <?php get_template_part('template-parts/graphic/mountain'); ?>
+      <?php if ($intro_graphic) : ?>
+      <img src="<?= $url; ?>" alt="<? $alt; ?>">
+      <?php else : ?> <?php get_template_part("template-parts/graphic/mountain"); ?>
+      <?php endif; ?>
     </div>
-    <?php }; ?>
   </div>
 
 </section><!-- .intro -->

@@ -39,7 +39,7 @@ if ($sl_bg_image) {
   class="section-orientation <?php if ($sl_bg_image_url) {
                                                                                                                           echo 'bg-image';
                                                                                                                         } else {
-                                                                                                                          echo '';
+                                                                                                                          echo 'without-bg';
                                                                                                                         } ?> ">
   <div class="container content-wrapper">
     <div class="columns is-flex">
@@ -48,8 +48,8 @@ if ($sl_bg_image) {
         <h3 data-aos="fade-right" data-aos-duration="1000" class="italic-subtitle is-capitalized has-text-info-light">
           <?php echo $sl_subheadline ?></h3>
         <h2 data-aos="fade-right" data-aos-duration="2000"><?php echo $sl_title ?></h2>
-        <p data-aos="fade-up" data-aos-delay="400" data-aos-offset="300" data-aos-easing="ease-in-sine">
-          <?php echo $sl_content; ?></p>
+        <span data-aos="fade-up" data-aos-delay="400" data-aos-offset="300" data-aos-easing="ease-in-sine"
+          class="text-content"><?php echo $sl_content; ?></span>
         <?php if ($sl_button_label) { ?>
         <a data-aos="fade-right" class="is-uppercase <?php if ($sl_bg_image_url) {
                                                           echo 'card-anchor show-modal-btn';
@@ -68,14 +68,19 @@ if ($sl_bg_image) {
                                             echo 'right';
                                           } else {
                                             echo 'left';
-                                          } ?>" data-aos="fade-left" data-aos-delay="400" data-aos-duration="3000">
+                                          } ?>" data-aos="fade-left" data-aos-delay="400" data-aos-duration="3000"
+        id="<?php if (!$sl_graphic and !$sl_bg_image_url) {
+                                                                                                                          echo 'without-graphic';
+                                                                                                                        } else {
+                                                                                                                          echo '';
+                                                                                                                        } ?>">
         <img src="<?php echo $sl_img_url; ?>" alt="<?php echo $sl_img_alt; ?>">
       </div>
     </div>
     <?php if ($sl_graphic) { ?>
-    <div data-aos="fade-up" class="stl-graphic">
+    <div data-aos="fade-right" class="stl-graphic">
       <?php get_template_part('template-parts/graphic/mountain'); ?>
     </div>
-    <?php } ?>
+    <?php }; ?>
   </div>
 </section><!-- .section-text-left -->

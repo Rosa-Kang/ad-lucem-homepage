@@ -60,6 +60,6 @@ if ($page_decoration) {
     </div>
   </div>
 </section>
-<div data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="map">
+<div class="map">
   <?= $map; ?>
 </div>

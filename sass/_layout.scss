@@ -12,20 +12,15 @@ section {
 // }
 
 .bg-image {
-  // min-height: 40vw;
-  // background: linear-gradient(
-  //   180deg,
-  //   rgba(185, 113, 49, 0.25) 0,
-  //   rgba(185, 113, 49, 0.25)
-  // );
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 63% 17%;
+  background-position: 67% 17%;
 }
 
-#services.bg-image {
-  background-position: 50% 103%;
+.page-id-272 .hero.bg-image {
+  background-position: center 67%;
 }
+
 // Backgrounds (use Bulma has-background-color) --------------------
 .bg-light-bis {
   background: $color__light-bis;
@@ -148,7 +143,13 @@ section.sticky-background.bg-image {
 
 .normal-background {
   z-index: -1;
-  margin-top: -190px;
+  margin-top: -6rem;
+  @include bp(tablet) {
+    margin-top: -11rem;
+  }
+  @include bp(desktop-1280) {
+    margin-top: -12rem;
+  }
 }
 
 //info-gallery
@@ -241,7 +242,12 @@ p.schema-faq-answer {
 //List-with-Graphic
 .lg-graphic {
   position: absolute;
-  width: 32vw;
-  right: 64%;
-  bottom: -6%;
+  width: 300px;
+  right: -38%;
+  top: 1%;
+  @include bp(tablet) {
+    width: 400px;
+    right: 64%;
+    top: 30%;
+  }
 }
