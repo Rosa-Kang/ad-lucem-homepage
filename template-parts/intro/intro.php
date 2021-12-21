@@ -29,11 +29,11 @@ if ($intro_graphic) {
                       }; ?>">
   <div class=" container content-wrapper column is-8-widescreen is-7-desktop">
     <div class="has-text-centered mb-6">
-      <h3 data-aos="fade-right" class="italic-subtitle is-capitalized has-text-info-light">
+      <h3 class="italic-subtitle is-capitalized has-text-info-light">
         <?php echo $intro_subheadline ?>
       </h3>
-      <h2 data-aos="fade-right" id="dark-h2"><?php echo $intro_title ?></h2>
-      <p data-aos="fade-up" data-aos-delay="200" class="has-text-left px-4" data-aos="fade-left">
+      <h2 id="dark-h2"><?php echo $intro_title ?></h2>
+      <p class="has-text-left px-4" data-aos="fade-left">
         <?php echo $intro_content ?></p>
       <a data-aos="fade-right" data-aos-duration="2000" class="button is-uppercase is-primary"
         href="<?php echo $intro_button_link ?>">

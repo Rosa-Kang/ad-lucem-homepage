@@ -8887,12 +8887,16 @@ section {
   padding-top: 80px;
   padding-bottom: 80px; }
 
-.bg-image {
+body.home .bg-image,
+body.page-about .bg-image,
+body.page-speaking .bg-image {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 67% 17%; }
 
-.page-id-272 .hero.bg-image {
+.hero.bg-image {
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center 67%; }
 
 .bg-light-bis {
@@ -9008,15 +9012,24 @@ section.info-gallery {
       background-size: 36vw; } }
 
 .schema-faq-section {
-  margin-bottom: 20px; }
+  cursor: pointer;
+  margin-bottom: 20px;
+  position: relative; }
+
+.schema-faq-section.faq-closed::after {
+  content: url("/ad-lucem/wp-content/themes/ad-lucem/assets/svg/arrow-down.svg");
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.schema-faq-section.faq-opened::after {
+  content: url("/ad-lucem/wp-content/themes/ad-lucem/assets/svg/arrow-up.svg");
+  position: absolute;
+  top: 0;
+  right: 0; }
 
 strong.schema-faq-question {
   font-weight: normal; }
-  strong.schema-faq-question:after {
-    content: '';
-    background: url(../assets/svg/angle-down.svg) no-repeat !important;
-    background-position: 100% !important;
-    padding-left: 40px; }
 
 p.schema-faq-answer {
   margin-top: 20px;
@@ -9047,14 +9060,21 @@ p.schema-faq-answer {
   width: 60%; }
 
 .accordion-closed::after {
-  content: '+ SHOW MORE';
-  font-size: 15px;
-  line-height: 30px;
+  content: url("/ad-lucem/wp-content/themes/ad-lucem/assets/svg/arrow-down.svg");
   position: absolute;
-  font-style: italic;
-  font-weight: 600;
-  padding-right: 21px;
-  right: 10%; }
+  right: 5%; }
+  @media (min-width: 768px) {
+    .accordion-closed::after {
+      right: 0%; } }
+  @media (min-width: 1280px) {
+    .accordion-closed::after {
+      content: '+ SHOW MORE';
+      right: 10%;
+      font-size: 15px;
+      line-height: 30px;
+      font-style: italic;
+      font-weight: 600;
+      padding-right: 21px; } }
 
 .accordion-closed:hover:after {
   color: #fbad18; }
@@ -9063,14 +9083,21 @@ p.schema-faq-answer {
   cursor: pointer; }
 
 .accordion-opened::after {
-  content: '- SHOW LESS';
-  font-size: 15px;
-  line-height: 30px;
+  content: url("/ad-lucem/wp-content/themes/ad-lucem/assets/svg/arrow-up.svg");
   position: absolute;
-  font-style: italic;
-  font-weight: 600;
-  padding-right: 21px;
-  right: 10%; }
+  right: 5%; }
+  @media (min-width: 768px) {
+    .accordion-opened::after {
+      right: 0%; } }
+  @media (min-width: 1280px) {
+    .accordion-opened::after {
+      content: '- SHOW LESS';
+      right: 10%;
+      font-size: 15px;
+      line-height: 30px;
+      font-style: italic;
+      font-weight: 600;
+      padding-right: 21px; } }
 
 .accordion-opened:hover:after {
   color: #fbad18; }
@@ -9088,6 +9115,22 @@ p.schema-faq-answer {
       width: 400px;
       right: 64%;
       top: 30%; } }
+
+.popout-menu .social-icons-wrapper.is-flex {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 117px;
+  margin-top: 59px; }
+
+.footer-contact-wrapper .social-icons-wrapper.is-flex {
+  width: 121px; }
+  @media (min-width: 768px) {
+    .footer-contact-wrapper .social-icons-wrapper.is-flex {
+      width: 118px; } }
+
+.top-bar .social-icons-wrapper.is-flex {
+  width: 72px; }
 
 html {
   font-family: sans-serif;
@@ -10281,6 +10324,11 @@ object {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+.maple-icon {
+  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
+  height: 24.76px; }
+
 .site-branding {
   display: none; }
 
@@ -10299,10 +10347,6 @@ object {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    .top-bar .top-bar-inner .maple-icon {
-      -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
-              filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
-      height: 24.76px; }
     .top-bar .top-bar-inner .top-bar-left {
       -webkit-box-pack: start;
           -ms-flex-pack: start;
@@ -10606,9 +10650,17 @@ li#menu-item-353 {
     margin-left: 0;
     font-size: 12px; }
 
-li#menu-item-360::after {
-  content: '';
-  background-image: url("../assets/svg/angle-down.svg"); }
+li#menu-item-360 > a {
+  padding-right: 1rem; }
+  li#menu-item-360 > a::after {
+    content: url("/ad-lucem/wp-content/themes/ad-lucem/assets/svg/arrow-light-down.svg");
+    position: absolute;
+    padding-left: 3px; }
+  li#menu-item-360 > a:hover::after {
+    padding-left: 3px;
+    content: url("/ad-lucem/wp-content/themes/ad-lucem/assets/svg/arrow-light-up.svg");
+    position: absolute;
+    color: #fffaf4; }
 
 .desktop-menu-wrapper {
   display: none; }
@@ -10832,6 +10884,9 @@ li.menu-item-has-children .mobile-menu-btn {
       background-repeat: no-repeat;
       background-size: 280px;
       background-position: left 1.5rem bottom 1.5rem; } }
+  .site-footer .maple-icon {
+    width: 15px;
+    height: 16px; }
   .site-footer p,
   .site-footer a {
     margin: 11px 0;
@@ -11250,19 +11305,15 @@ section#orientation.bg-image {
     .section-orientation .container .stl-graphic {
       z-index: 0;
       position: absolute;
-      bottom: -12%;
+      bottom: -24%;
       right: -18%; }
       @media (min-width: 768px) {
         .section-orientation .container .stl-graphic {
-          bottom: -18%;
+          bottom: -29%;
           right: 38%; } }
       @media (min-width: 1280px) {
         .section-orientation .container .stl-graphic {
-          bottom: -19%;
-          left: -6%; } }
-      @media (min-width: 1440px) {
-        .section-orientation .container .stl-graphic {
-          bottom: -11%;
+          bottom: -32%;
           left: -6%; } }
 
 .has-background-dusk {
@@ -11342,6 +11393,21 @@ section.section-list-graphic {
       section.section-list-graphic .lg-graphic svg {
         top: 188px;
         left: -188px; } }
+
+section#news-cards {
+  position: relative; }
+  section#news-cards .news-article-graphic {
+    position: absolute;
+    bottom: -2%;
+    left: -2%; }
+    @media (min-width: 768px) {
+      section#news-cards .news-article-graphic {
+        bottom: -12%;
+        left: 42%; } }
+    @media (min-width: 1280px) {
+      section#news-cards .news-article-graphic {
+        bottom: -14%;
+        left: 57%; } }
 
 /*--------------------------------------------------------------
 # Slider

@@ -251,18 +251,14 @@ section#orientation .container {
     .stl-graphic {
       z-index: 0;
       position: absolute;
-      bottom: -12%;
+      bottom: -24%;
       right: -18%;
       @include bp(tablet) {
-        bottom: -18%;
+        bottom: -29%;
         right: 38%;
       }
       @include bp(desktop-1280) {
-        bottom: -19%;
-        left: -6%;
-      }
-      @include bp(desktop-1440) {
-        bottom: -11%;
+        bottom: -32%;
         left: -6%;
       }
     }
@@ -350,6 +346,25 @@ section.section-list-graphic {
         top: 188px;
         left: -188px;
       }
+    }
+  }
+}
+
+//News Articles section
+section#news-cards {
+  position: relative;
+  .news-article-graphic {
+    position: absolute;
+    bottom: -2%;
+    left: -2%;
+
+    @include bp(tablet) {
+      bottom: -12%;
+      left: 42%;
+    }
+    @include bp(desktop-1280) {
+      bottom: -14%;
+      left: 57%;
     }
   }
 }

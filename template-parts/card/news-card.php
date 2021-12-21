@@ -22,6 +22,7 @@ if (is_home()) {
       <?php echo $subheadline ?></h3>
     <h2 data-aos="fade-right" data-aos-duration="2000"><?php echo $headline ?></h2>
     <div class="is-flex is-flex-wrap-wrap is-justify-content-center">
+
       <?php if (have_rows('news_cards', $page_id)) :
         while (have_rows('news_cards', $page_id)) : the_row();
           $thumbnail = get_sub_field('ns_thumbnail');
@@ -33,7 +34,10 @@ if (is_home()) {
           $ns_button_label = get_sub_field('ns_button_label');
           $ns_button_link = get_sub_field('ns_button_link');
       ?>
-      <div data-aos="fade-up" class="column is-5 has-background-secondary m-3 text-overflow">
+
+
+
+      <div data-aos="fade-up" class="column news-card-article is-5 has-background-secondary m-4 text-overflow">
         <img width="150px" src="<?= $url; ?>" alt="<?= $alt; ?>">
         <h3 class="on-card is-capitalized mb-3"><?php echo $ns_subheadline; ?></h3>
         <p class="min-height-260"><?php echo $ns_excerpt; ?></p>
@@ -46,6 +50,10 @@ if (is_home()) {
 
       endif;
       ?>
+      <a data-aos="fade-up" href="#" class="news-article-show-more button is-primary my-6 is-uppercase">Show More</a>
     </div>
+  </div>
+  <div data-aos="fade-left" data-aos-duration="2000" class="news-article-graphic">
+    <?php get_template_part("template-parts/graphic/mountain"); ?>
   </div>
 </section>

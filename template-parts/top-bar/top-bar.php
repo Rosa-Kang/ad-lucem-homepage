@@ -6,9 +6,9 @@
 ?>
 <?php
 $post_id = get_field('business_info_id', 'option');
-$site_icon = get_field('site_icon', $post_id);
 $email  = get_field('email', $post_id);
 $tell  = get_field('tell', $post_id);
+$site_icon = get_field('site_icon', $post_id);
 
 if ($site_icon) {
   $site_url = $site_icon['url'];
@@ -23,7 +23,7 @@ if ($site_icon) {
       <a class="top-bar-text" href="mailto:<?php echo $email; ?>" class="footer-text"><?php echo $email; ?></a>
     </div>
     <div class="column top-bar-right is-flex is-flex-direction-row is-align-items-center px-0">
-      <a class="top-bar-text" href="#">FAQ</a>
+      <a class="top-bar-text" href="/faq">FAQ</a>
       <?php get_template_part('template-parts/icon/icons-social'); ?>
     </div>
   </div>

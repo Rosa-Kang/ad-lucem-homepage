@@ -46,7 +46,7 @@
           <div class="desktop-menu-wrapper">
             <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
             <div class="has-text-centered" style="    padding: 40px 0 0 40px;">
-              <a href="#contact" class="button is-primary is-uppercase">Book A
+              <a href="/contact" class="button is-primary is-uppercase">Book A
                 Consult</a>
             </div>
           </div>
@@ -59,6 +59,7 @@
                 <?php get_template_part('template-parts/icon/icon-close'); ?>
               </button>
               <?php wp_nav_menu(array('theme_location' => 'mobile-menu', 'menu_id' => 'mobile-menu', 'container-class' => 'mobile-menu-container')); ?>
+              <?php get_template_part('template-parts/icon/icons-social'); ?>
             </div>
           </div>
         </div><!-- .main-navigation-container -->

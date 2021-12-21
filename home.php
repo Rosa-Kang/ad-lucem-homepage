@@ -23,7 +23,7 @@ get_header(); ?>
     <div class="is-flex is-flex-wrap-wrap is-justify-content-center">
       <?php if (have_posts()) :
         while (have_posts()) : the_post(); ?>
-      <article data-aos="fade-up" class="column is-5 has-background-secondary m-3 text-overflow">
+      <article data-aos="fade-up" class="column is-5 has-background-secondary m-4 text-overflow">
         <div><?php the_post_thumbnail(); ?></div>
         <h2 class="subtitle is-capitalized"><?php the_title(); ?></h2>
         <p><?php the_excerpt(); ?></p>

@@ -45,19 +45,28 @@
     // Start of FAQ Accordion --------------------
     $('.schema-faq').addClass('accordion-pair my-5');
     $('.schema-faq-answer').css('display', 'none');
+    $('.schema-faq-section').addClass('faq-closed');
     $('.schema-faq-question').addClass('py-5 faq-closed');
-    $('.schema-faq-question').click(function () {
-      if ($(this).next().is(':visible')) {
-        $(this).next().slideUp();
+    $('.schema-faq-section').click(function () {
+      if ($(this).children('p').is(':visible')) {
+        $(this).children('p').slideUp();
         $(this).removeClass('faq-opened');
         $(this).addClass('faq-closed');
+        $(this).children('strong').removeClass('faq-opened');
+        $(this).children('strong').addClass('faq-closed');
       } else {
         $('.schema-faq-answer').slideUp();
         $(this).removeClass('faq-closed');
-        $(this).next().slideDown();
+        $(this).children('p').slideDown();
         $(this).addClass('faq-opened');
-        $('.schema-faq-question').not(this).removeClass('faq-opened');
-        $('.schema-faq-question').not(this).addClass('faq-closed');
+        $('.schema-faq-question')
+          .not(this)
+          .children('strong')
+          .removeClass('faq-opened');
+        $('.schema-faq-question')
+          .not(this)
+          .children('strong')
+          .addClass('faq-closed');
       }
     }); // End of FAQ Accordion ----------------
 
@@ -71,7 +80,7 @@
       $('article:hidden').slice(0, 4).show();
       if ($('article:hidden').length === 0) {
         $('#loadMore').replaceWith(
-          '<p class="button is-primary is-uppercase">no more</p>'
+          '<p data-aos="fade-up" class="button is-primary is-uppercase">no more</p>'
         );
       }
     });
@@ -82,9 +91,23 @@
       e.preventDefault();
       $('.bulletins li:hidden').slice(0, 4).show();
       if ($('.bulletins li:hidden').length === 0) {
-        $('#loadMore').replaceWith("<p class='text-btn'>no more</p>");
+        $('#loadMore').replaceWith('<p class="text-btn">no more</p>');
       }
     }); //End of Show More
+
+    //News Article Show More Button
+
+    $('#news-cards .news-card-article').hide().slice(0, 4).show();
+
+    $('.news-article-show-more').click(function (e) {
+      e.preventDefault();
+      $('.news-card-article:hidden').slice(0, 4).show();
+      if ($('.news-card-article:hidden').length === 0) {
+        $('.news-article-show-more').replaceWith(
+          '<p data-aos="fade-up" class="button is-primary is-uppercase my-6">no more</p>'
+        );
+      }
+    }); //End of Article Show more
 
     // Start of Modals -----------------
     $('.modal').each(function (i) {

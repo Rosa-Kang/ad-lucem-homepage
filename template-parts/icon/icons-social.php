@@ -14,7 +14,7 @@ $instagram_url = get_field('instagram_url', $post_id);
 $twitter_url = get_field('twitter_url', $post_id);
 ?>
 <?php if ($facebook_url || $instagram_url || $twitter_url) : ?>
-<div class="social-icons-wrapper">
+<div class="social-icons-wrapper is-flex">
   <?php if ($facebook_url) : ?>
   <a href="<?php echo $facebook_url; ?>" target="_blank"
     rel="noopener noreferrer"><?php get_template_part('template-parts/icon/icon-facebook'); ?><span

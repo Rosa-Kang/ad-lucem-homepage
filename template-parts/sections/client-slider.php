@@ -22,15 +22,16 @@ $args = array(
 
 $clients = get_posts($args);
 ?>
-<section class="our-clients-slider">
+<section data-aos="fade-up" data-aos-duration="2000" class="our-clients-slider">
   <div class="has-text-centered ">
     <?php if ($title) : ?>
-    <h3 data-aos="fade-right" data-aos-delay="500" class="italic-subtitle is-capitalized"><?php echo $subtitle; ?></h3>
-    <h2 class="mb-0" data-aos="fade-right" data-aos-delay="500"> <?php echo $title; ?> </h2>
+    <h3 class="italic-subtitle is-capitalized has-text-info-light">
+      <?php echo $subtitle; ?></h3>
+    <h2 class="mb-0"> <?php echo $title; ?> </h2>
     <?php endif; ?>
   </div><!-- .container -->
 
-  <div data-aos="fade-down" data-aos-delay="500" data-aos-duration="2000" class="container content-wrapper px-0">
+  <div class="container content-wrapper px-0">
     <div class="mx-6">
       <div class="swiper-container clientSwiper">
         <ul class="swiper-wrapper list-style-none is-align-items-center">

@@ -45,42 +45,40 @@ if ($sl_bg_image) {
     <div class="columns is-flex">
 
       <div class="column text-container <?php echo $sl_orientation; ?>">
-        <h3 data-aos="fade-right" data-aos-duration="1000" class="italic-subtitle is-capitalized has-text-info-light">
+        <h3 class="italic-subtitle is-capitalized has-text-info-light">
           <?php echo $sl_subheadline ?></h3>
-        <h2 data-aos="fade-right" data-aos-duration="2000"><?php echo $sl_title ?></h2>
-        <span data-aos="fade-up" data-aos-delay="400" data-aos-offset="300" data-aos-easing="ease-in-sine"
-          class="text-content"><?php echo $sl_content; ?></span>
+        <h2><?php echo $sl_title ?></h2>
+        <span class="text-content"><?php echo $sl_content; ?></span>
         <?php if ($sl_button_label) { ?>
-        <a data-aos="fade-right" class="is-uppercase <?php if ($sl_bg_image_url) {
-                                                          echo 'card-anchor show-modal-btn';
-                                                        } else {
-                                                          echo 'button is-primary';
-                                                        } ?> " href="<?php if ($sl_bg_image_url) {
-                                                                        echo "#";
-                                                                      } else {
-                                                                        echo $sl_button_link;
-                                                                      } ?>">
+        <a class="is-uppercase <?php if ($sl_bg_image_url) {
+                                    echo 'card-anchor show-modal-btn';
+                                  } else {
+                                    echo 'button is-primary';
+                                  } ?> " href="<?php if ($sl_bg_image_url) {
+                                                  echo "#";
+                                                } else {
+                                                  echo $sl_button_link;
+                                                } ?>">
           <?php echo $sl_button_label ?>
         </a>
         <?php } ?>
       </div>
-      <div class="column  image-container <?php if ($sl_orientation == 'left') {
-                                            echo 'right';
-                                          } else {
-                                            echo 'left';
-                                          } ?>" data-aos="fade-left" data-aos-delay="400" data-aos-duration="3000"
-        id="<?php if (!$sl_graphic and !$sl_bg_image_url) {
-                                                                                                                          echo 'without-graphic';
-                                                                                                                        } else {
-                                                                                                                          echo '';
-                                                                                                                        } ?>">
+      <div data-aos="fade-left" class="column  image-container <?php if ($sl_orientation == 'left') {
+                                                                  echo 'right';
+                                                                } else {
+                                                                  echo 'left';
+                                                                } ?>" id="<?php if (!$sl_graphic and !$sl_bg_image_url) {
+                                                                            echo 'without-graphic';
+                                                                          } else {
+                                                                            echo '';
+                                                                          } ?>">
         <img src="<?php echo $sl_img_url; ?>" alt="<?php echo $sl_img_alt; ?>">
       </div>
     </div>
-    <?php if ($sl_graphic) { ?>
+    <?php if ($sl_graphic) : ?>
     <div data-aos="fade-right" class="stl-graphic">
       <?php get_template_part('template-parts/graphic/mountain'); ?>
     </div>
-    <?php }; ?>
+    <?php endif; ?>
   </div>
 </section><!-- .section-text-left -->

@@ -12,6 +12,12 @@ $post_id = get_field('business_info_id', 'option');
 $logo = get_field('footer_logo', $post_id);
 $email  = get_field('email', $post_id);
 $tell  = get_field('tell', $post_id);
+$site_icon = get_field('site_icon', $post_id);
+
+if ($site_icon) {
+  $site_url = $site_icon['url'];
+  $site_alt = $site_icon['alt'];
+}
 
 if ($logo) {
   $logo_url = $logo['url'];
@@ -32,7 +38,10 @@ if ($logo) {
       <div class="column is-7">
         <div class="footer-contact-wrapper is-align-items-center is-flex is-flex-direction-column">
           <a href="mailto:<?php echo $email; ?>" class="footer-text"><?php echo $email; ?></a>
-          <a href="tel:<?php echo $tell; ?>"><?php echo $tell; ?></a>
+          <div class="site-icon-phone mt-2 mb-4">
+            <img class="maple-icon" src="<?= $site_url; ?>" alt="<?= $site_alt; ?>">
+            <a href="tel:<?php echo $tell; ?>"><?php echo $tell; ?></a>
+          </div>
           <?php get_template_part('template-parts/icon/icons-social'); ?>
         </div>
         <div class="copyright-wrapper has-text-center mt-4">
