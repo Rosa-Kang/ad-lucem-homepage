@@ -24,6 +24,12 @@ a {
 }
 
 /* Menus */
+li#menu-item-455.focus ul.sub-menu {
+  display: block;
+  li {
+    padding: 2rem 0 0 2rem;
+  }
+}
 .main-navigation {
   clear: both;
   display: block;

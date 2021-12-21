@@ -27,7 +27,7 @@ $twitter_url = get_field('twitter_url', $post_id);
   <?php endif; ?>
   <?php if ($instagram_url) : ?>
   <a href="<?php echo $instagram_url; ?>" target="_blank"
-    rel="noopener noreferrer"><?php get_template_part('template-parts/icon/icon-instagram'); ?><span
+    rel="noopener noreferrer"><?php get_template_part('template-parts/icon/icon-linkedin'); ?><span
       class="visually-hidden">Instagram</span></a>
   <?php endif; ?>
 </div>

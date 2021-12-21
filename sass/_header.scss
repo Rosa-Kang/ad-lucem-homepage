@@ -114,6 +114,24 @@
   }
 }
 
+#close-popout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border: none;
+  background: none;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0;
+  .menu-icon {
+    width: 35px;
+    height: 1px;
+    border: 1px solid $color__light;
+    border-radius: 3px;
+    margin-bottom: 7px;
+  }
+}
+
 #menu-bars {
   border: none;
   background: none;
@@ -150,8 +168,8 @@
   }
 
   svg {
-    width: 30px;
-    height: 30px;
+    width: 21px;
+    height: 21px;
   }
 }
 
@@ -195,7 +213,7 @@
   width: $mobile__menu-width;
   height: 100%;
   background: $color__dark;
-  @include flex(column, unset, flex-start);
+  @include flex(column, unset, flex-end);
   color: $color__light;
   overflow-x: hidden;
   overflow-y: auto;
@@ -215,6 +233,7 @@
     li {
       width: 100%;
       padding: $space-unit--s 0;
+      text-align: right;
     }
   }
 
@@ -259,19 +278,27 @@ li#menu-item-353 {
 
 li#menu-item-360 > a {
   padding-right: 1rem;
+}
+
+a.menu-folded {
   &::after {
     content: url('/ad-lucem/wp-content/themes/ad-lucem/assets/svg/arrow-light-down.svg');
     position: absolute;
     padding-left: 3px;
   }
+}
 
-  &:hover::after {
+a.menu-unfolded,
+li#menu-item-455.focus > a {
+  color: $color__info-light !important;
+  &::after {
     padding-left: 3px;
     content: url('/ad-lucem/wp-content/themes/ad-lucem/assets/svg/arrow-light-up.svg');
     position: absolute;
     color: #fffaf4;
   }
 }
+
 .desktop-menu-wrapper {
   display: none;
 

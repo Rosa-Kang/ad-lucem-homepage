@@ -42,6 +42,22 @@
       }
     }); // End of Accordion Repeater -------------------
 
+    //Header-Menu Arrow-Down on mouse-hover
+    $('#menu-item-360').children('a').addClass('menu-folded');
+    $('#menu-item-455').children('a').addClass('menu-folded');
+    $('#menu-item-360').hover(
+      function () {
+        $(this).children('a').removeClass('menu-folded');
+        $(this).children('a').addClass('menu-unfolded');
+      },
+      function () {
+        $(this).children('a').removeClass('menu-unfolded');
+        $(this).children('a').addClass('menu-folded');
+      }
+    );
+
+    //--------end of Menu hover
+
     // Start of FAQ Accordion --------------------
     $('.schema-faq').addClass('accordion-pair my-5');
     $('.schema-faq-answer').css('display', 'none');
