@@ -1,6 +1,6 @@
 // Intro
 .pb-extra {
-  padding-bottom: 180vw;
+  padding-bottom: 154vw;
   @include bp(tablet) {
     padding-bottom: 79vw;
   }
@@ -99,7 +99,7 @@ section#services .container {
     a.modal-close.is-shadowless {
       position: absolute;
       top: 42px;
-      right: 42px;
+      right: 32px;
       svg {
         fill: $color__info-light;
         &:hover {
@@ -162,8 +162,9 @@ section#orientation.bg-image {
 }
 
 //Orientation w/o bg-image
-section#orientation .container {
-  @include bp(tablet) {
+section#orientation.bg-image {
+  margin-top: 10rem;
+  @include bp(desktop-1280) {
     margin-top: 0;
   }
 }
@@ -239,7 +240,7 @@ section#orientation .container {
         }
       }
       div#without-graphic img {
-        margin-top: -5rem;
+        // margin-top: -5rem;
         @include bp(tablet) {
           margin-top: 1rem;
         }
@@ -311,12 +312,15 @@ section#orientation .container {
     max-width: 280px;
     display: inline-block;
   }
-  .wpforms-container input,
-  .wpforms-container textarea,
-  .wpforms-container select {
-    box-shadow: $box_shadow;
-    &::placeholder {
-      font-family: $font__pre;
+  .wpforms-container {
+    input,
+    textarea,
+    select,
+    .choices__inner {
+      box-shadow: $box_shadow;
+      &::placeholder {
+        font-family: $font__pre;
+      }
     }
   }
   .graphic-contact-page {
@@ -329,30 +333,13 @@ section#orientation .container {
     }
   }
 }
-//List-graphic
-section.section-list-graphic {
-  position: relative;
-  .lg-graphic {
-    svg {
-      position: absolute;
-      top: 134px;
-      left: -204px;
-      @include bp(tablet) {
-        top: 443px;
-        left: -28px;
-      }
-
-      @include bp(desktop-1280) {
-        top: 188px;
-        left: -188px;
-      }
-    }
-  }
-}
 
 //News Articles section
 section#news-cards {
   position: relative;
+  .column.news-card-article {
+    padding: 33px 30px;
+  }
   .news-article-graphic {
     position: absolute;
     bottom: -2%;

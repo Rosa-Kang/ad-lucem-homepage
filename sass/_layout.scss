@@ -47,6 +47,10 @@ body.page-speaking {
   padding: $base__space-unit;
 }
 
+article .entry-meta {
+  margin-top: $mobile__menu-height;
+}
+
 .content-wrapper {
   @include bp(tablet) {
     padding: $space-unit--lg;
@@ -136,7 +140,6 @@ section.sticky-background.bg-image {
   min-height: 500px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
 }
 
 .sticky-background {
@@ -144,8 +147,9 @@ section.sticky-background.bg-image {
 }
 
 .normal-background {
+  background-size: cover;
   z-index: -1;
-  margin-top: -6rem;
+  margin-top: -18rem;
   @include bp(tablet) {
     margin-top: -11rem;
   }
@@ -157,13 +161,27 @@ section.sticky-background.bg-image {
 //info-gallery
 
 section.info-gallery {
-  background-repeat: no-repeat;
-  background-position: 280% 0%;
-  background-size: 76vw;
+  position: relative;
+  .info-gallery-graphic {
+    @include bp(tablet) {
+      position: absolute;
+      top: -8%;
+      right: -15%;
+    }
 
-  @include bp(desktop-1280) {
-    background-position: 105% 0;
-    background-size: 36vw;
+    @include bp(desktop-1280) {
+      top: -7%;
+      right: -18%;
+    }
+    img {
+      width: 400px;
+      @include bp(tablet) {
+        width: 600px;
+      }
+      @include bp(desktop-1280) {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -175,14 +193,14 @@ section.info-gallery {
 }
 
 .schema-faq-section.faq-closed::after {
-  content: url('/ad-lucem/wp-content/themes/ad-lucem/assets/svg/arrow-down.svg');
+  content: url('/wp-content/themes/ad-lucem/assets/svg/arrow-down.svg');
   position: absolute;
   top: 0;
   right: 0;
 }
 
 .schema-faq-section.faq-opened::after {
-  content: url('/ad-lucem/wp-content/themes/ad-lucem/assets/svg/arrow-up.svg');
+  content: url('/wp-content/themes/ad-lucem/assets/svg/arrow-up.svg');
   position: absolute;
   top: 0;
   right: 0;
@@ -210,12 +228,15 @@ p.schema-faq-answer {
 }
 .accordion-detail {
   padding: 0 0px 32px;
-  width: 60%;
+
+  @include bp(desktop-1280) {
+    width: 60%;
+  }
 }
 
 .accordion-closed {
   &::after {
-    content: url('/ad-lucem/wp-content/themes/ad-lucem/assets/svg/arrow-down.svg');
+    content: url('/wp-content/themes/ad-lucem/assets/svg/arrow-down.svg');
     position: absolute;
     right: 5%;
     @include bp(tablet) {
@@ -224,7 +245,7 @@ p.schema-faq-answer {
 
     @include bp(desktop-1280) {
       content: '+ SHOW MORE';
-      right: 10%;
+      right: 7%;
       font-size: 15px;
       line-height: 30px;
       font-style: italic;
@@ -242,7 +263,7 @@ p.schema-faq-answer {
 
 .accordion-opened {
   &::after {
-    content: url('/ad-lucem/wp-content/themes/ad-lucem/assets/svg/arrow-up.svg');
+    content: url('/wp-content/themes/ad-lucem/assets/svg/arrow-up.svg');
     position: absolute;
     right: 5%;
     @include bp(tablet) {
@@ -250,7 +271,7 @@ p.schema-faq-answer {
     }
     @include bp(desktop-1280) {
       content: '- SHOW LESS';
-      right: 10%;
+      right: 7%;
       font-size: 15px;
       line-height: 30px;
       font-style: italic;
@@ -269,14 +290,32 @@ p.schema-faq-answer {
 
 //List-with-Graphic
 .lg-graphic {
-  position: absolute;
   width: 300px;
   right: -38%;
   top: 1%;
   @include bp(tablet) {
+    position: absolute;
     width: 400px;
-    right: 64%;
-    top: 30%;
+    right: 56%;
+    top: 26%;
+  }
+  @include bp(desktop-1280) {
+    top: 32%;
+    right: 74%;
+  }
+}
+
+//List Graphic w/h Mountain
+.lg-graphic.mountain {
+  @include bp(tablet) {
+    position: absolute;
+    width: 400px;
+    right: 77%;
+    top: 76%;
+  }
+  @include bp(desktop-1280) {
+    right: 76%;
+    top: 66%;
   }
 }
 
@@ -290,11 +329,8 @@ p.schema-faq-answer {
 }
 .footer-contact-wrapper {
   .social-icons-wrapper.is-flex {
-    width: 121px;
-
-    @include bp(tablet) {
-      width: 118px;
-    }
+    justify-content: space-between;
+    width: 100px;
   }
 }
 

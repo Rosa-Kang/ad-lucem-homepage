@@ -11,7 +11,7 @@
   <defs>
     <style>
     .cls-1 {
-      fill: #fff;
+      fill: #fbad18;
     }
     </style>
   </defs>

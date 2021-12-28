@@ -13,25 +13,27 @@ get_header(); ?>
 
 <?php
 // TODO: Add variables
+$date = get_the_date('F j, Y');
+$content = custom_excerpt(26);
 ?>
 
-<section id="primary" class="blog-container is-multiline content-wrapper is-flex is-justify-content-center">
-  <div class="container content-wrapper">
-    <h3 data-aos="fade-right" data-aos-duration="1000" class="italic-subtitle is-capitalized has-text-info-light">
+<section id="primary" class="container is-multiline content-wrapper is-flex is-justify-content-center">
+  <div class="blog-article-wrapper">
+    <h3 class="italic-subtitle is-capitalized has-text-info-light">
       In the news</h3>
-    <h2 data-aos="fade-right" data-aos-duration="2000">Our Blog</h2>
+    <h2>Our Blog</h2>
     <div class="is-flex is-flex-wrap-wrap is-justify-content-center">
       <?php if (have_posts()) :
         while (have_posts()) : the_post(); ?>
-      <article data-aos="fade-up" class="column is-5 has-background-secondary m-4 text-overflow">
-        <div><?php the_post_thumbnail(); ?></div>
+      <article data-aos="fade-up" class="column is-5 has-background-secondary m-4 text-overflow blog-article">
+        <h4 class="italic-subtitle is-capitalized"><?= $date; ?></h4>
         <h2 class="subtitle is-capitalized"><?php the_title(); ?></h2>
-        <p><?php the_excerpt(); ?></p>
+        <p><?php echo $content; ?></p>
         <a class="is-uppercase" href="<?php the_permalink($post_item['ID']) ?>">+ Read More</a>
       </article>
       <?php endwhile;
       else :
-        echo '<p data-aos="fade-up">No content found</p>';
+        echo '<p >No content found</p>';
 
       endif;
 

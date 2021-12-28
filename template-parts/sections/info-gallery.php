@@ -18,13 +18,13 @@ if ($graphic) {
   $graphic_alt = $graphic['alt'];
 }
 ?>
-<section class="info-gallery" style="background-image: url('<?= $graphic_url; ?>');">
+<section class="info-gallery">
   <div class="container content-wrapper">
     <div class="columns">
       <div class="column is-full-mobile is-7-desktop info-container">
-        <h3 data-aos="fade-right" data-aos-duration="1000" class="italic-subtitle is-capitalized has-text-info-light">
+        <h3 class="italic-subtitle is-capitalized has-text-info-light">
           <?php echo $subtitle ?></h3>
-        <h2 data-aos="fade-right" data-aos-duration="2000"><?php echo $title ?></h2>
+        <h2><?php echo $title ?></h2>
         <div class="columns is-flex-wrap-wrap is-justify-content-center p-2">
           <?php
           // Check rows exists.
@@ -42,7 +42,7 @@ if ($graphic) {
               }
               // Do something...
           ?>
-          <div data-aos="fade-up" class="column is-6">
+          <div class="column is-6">
             <img width="72px" src="<?= $logo_url ?>" alt="<?= $logo_alt ?>">
             <h3 class="titled is-capitalized mb-3"><?php echo $gallery_title; ?></h3>
             <h4><?= $gallery_subtitle; ?></h4>
@@ -56,7 +56,11 @@ if ($graphic) {
           // Do something...
           endif; ?>
         </div>
+        <div class="info-gallery-graphic column is-5">
+          <img src="<?= $graphic_url; ?>" alt="<?= $graphic_alt; ?>">
+        </div>
       </div>
+      <!--info-container -->
     </div>
   </div>
 

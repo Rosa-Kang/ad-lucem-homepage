@@ -8,7 +8,6 @@
   background: $color__dark;
 
   @include bp($mobile__menu-bp) {
-    // background: url('../../assets/backgrounds/park-place-seniors-living-bg-xl-leaf-light.svg');
     background-repeat: no-repeat;
     background-size: 280px;
     background-position: left $base__space-unit bottom $base__space-unit;
@@ -26,7 +25,6 @@
   }
 
   a,
-  p,
   p > a {
     text-decoration: none;
     &:hover {
@@ -76,6 +74,27 @@
 .footer-wrapper {
   background: $color__dark;
   @include flex(column, center, center);
+  @include bp(tablet) {
+    flex-direction: row;
+  }
+  .column.is-2.empty-space {
+    display: none;
+    @include bp(tablet) {
+      display: block;
+      order: 3;
+    }
+  }
+  .footer-logo-wrapper {
+    order: 2;
+    @include bp(tablet) {
+      order: 1;
+    }
+  }
+  .column.is-7 {
+    @include bp(tablet) {
+      order: 2;
+    }
+  }
 }
 
 .copyright-wrapper {

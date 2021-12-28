@@ -15,12 +15,13 @@ if ($site_icon) {
   $site_alt = $site_icon['alt'];
 }
 ?>
-<div class="top-bar">
+<div class="top-bar ">
   <div class="is-flex top-bar-inner container content-wrapper py-0">
-    <div class="column top-bar-left is-flex is-flex-direction-row is-align-items-center px-0">
+    <div class="column top-bar-left is-flex is-flex-direction-row p-0">
       <img class="maple-icon" src="<?= $site_url; ?>" alt="<?= $site_alt; ?>" width="22.54" height="24.76">
-      <a class="top-bar-text px-3" href="tel:<?php echo $tell; ?>"><?php echo $tell; ?></a>
-      <a class="top-bar-text" href="mailto:<?php echo $email; ?>" class="footer-text"><?php echo $email; ?></a>
+      <a class="top-bar-text tel" href="tel:<?php echo $tell; ?>"><?php echo $tell; ?></a>
+      <span class="px-1" style="color: #ffffff;"> &#8226; </span>
+      <div><a class="top-bar-text" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></div>
     </div>
     <div class="column top-bar-right is-flex is-flex-direction-row is-align-items-center px-0">
       <a class="top-bar-text" href="/faq">FAQ</a>

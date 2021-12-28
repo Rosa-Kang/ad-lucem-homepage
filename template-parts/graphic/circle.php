@@ -8,8 +8,8 @@
 
 ?>
 
-<svg data-aos="fade-right" data-aos-duration="2000" data-aos-delay="500" class="mb-3" xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink" width="79.933" height="80.034" viewBox="0 0 79.933 80.034">
+<svg class="mb-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="79.933"
+  height="80.034" viewBox="0 0 79.933 80.034">
   <defs>
     <clipPath id="clip-path">
       <rect id="Rectangle_112" data-name="Rectangle 112" width="79.921" height="80.033" transform="translate(0 0)"

@@ -22,12 +22,11 @@ if ($background) {
   <div class="container content-wrapper">
     <div class="columns">
       <div class="column is-7">
-        <h3 data-aos="fade-right" data-aos-duration="1000"
-          class="py-2 italic-subtitle is-capitalized has-text-info-light">
+        <h3 class="py-2 italic-subtitle is-capitalized has-text-info-light">
           <?php echo $subtitle ?></h3>
-        <h2 data-aos="fade-right" data-aos-duration="2000" class="py-2" id="dark-h2">
+        <h2 class="py-2" id="dark-h2">
           <?php echo $title ?></h2>
-        <p data-aos="fade-up" data-aos-duration="3000" class="py-2"><?php echo $content ?></p>
+        <p class="py-2"><?php echo $content ?></p>
       </div>
       <div class="column is-5">
 

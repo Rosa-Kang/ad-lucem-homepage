@@ -48,7 +48,7 @@
 
     AOS.init({
       duration: 1300,
-      once: false,
+      once: true,
       mirror: true,
     });
 

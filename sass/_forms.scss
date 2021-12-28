@@ -191,11 +191,6 @@ div.wpforms-container-full
   -webkit-appearance: none !important;
 }
 
-select#wpforms-57-field_3 {
-  height: 49px !important;
-  margin-top: 1.2px;
-}
-
 div#wpforms-57-field_1-container,
 div#wpforms-57-field_2-container,
 div#wpforms-57-field_3-container,
@@ -218,5 +213,20 @@ section#contact {
   .aos-init.aos-animate {
     position: relative;
     z-index: 10;
+  }
+}
+
+div.wpforms-container .wpforms-form .choices[data-type*='select-one']:after {
+}
+
+form#wpforms-form-57 {
+  .choices__item.choices__placeholder.choices__item--selectable {
+    text-align: left;
+    font-family: $font__main;
+    padding: 4px 0 3px;
+  }
+  .choices__item--selectable {
+    text-align: left;
+    font-family: $font__main;
   }
 }

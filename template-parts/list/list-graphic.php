@@ -22,12 +22,12 @@ if ($lg_graphic) {
 
 <section class="section-list-graphic container content-wrapper">
   <div class="columns">
-    <div class="column">
-      <h3 data-aos=" fade-right" data-aos-duration="1000" class="italic-subtitle has-text-info-light is-capitalized">
+    <div class="column is-5-desktop">
+      <h3 class="italic-subtitle has-text-info-light is-capitalized">
         <?php echo $lg_subtitle; ?></h3>
-      <h2 data-aos="fade-right" data-aos-duration="2000"><?php echo $lg_title; ?></h2>
+      <h2><?php echo $lg_title; ?></h2>
     </div>
-    <div class="column">
+    <div class="column is-7-desktop">
       <ul class="lg-items">
         <?php
         // Check rows exists.
@@ -36,7 +36,7 @@ if ($lg_graphic) {
           while (have_rows('lg_content')) : the_row();
             $list = get_sub_field('lg_content_item');
         ?>
-        <li data-aos="fade-left"><?= $list; ?></li>
+        <li><?= $list; ?></li>
         <?php
           endwhile;
         else :
@@ -45,8 +45,11 @@ if ($lg_graphic) {
       </ul>
     </div>
   </div>
-  <div data-aos="zoom-in" data-aos-delay="200" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
-    class="lg-graphic">
+  <div data-aos="fade-right" class="lg-graphic <?php if ($lg_graphic) {
+                                                  echo "";
+                                                } else {
+                                                  echo "mountain";
+                                                } ?> ">
     <?php if ($lg_graphic) : ?>
     <img src="<?= $lg_url; ?>" alt="<? $lg_alt; ?>">
     <?php else : ?> <?php get_template_part("template-parts/graphic/mountain"); ?>

@@ -50,33 +50,33 @@ if ($sl_bg_image) {
         <h2><?php echo $sl_title ?></h2>
         <span class="text-content"><?php echo $sl_content; ?></span>
         <?php if ($sl_button_label) { ?>
-        <a class="is-uppercase <?php if ($sl_bg_image_url) {
-                                    echo 'card-anchor show-modal-btn';
-                                  } else {
-                                    echo 'button is-primary';
-                                  } ?> " href="<?php if ($sl_bg_image_url) {
-                                                  echo "#";
-                                                } else {
-                                                  echo $sl_button_link;
-                                                } ?>">
+        <a data-aos="fade-right" class="is-uppercase <?php if ($sl_bg_image_url) {
+                                                          echo 'card-anchor show-modal-btn';
+                                                        } else {
+                                                          echo 'button is-primary';
+                                                        } ?> " href="<?php if ($sl_bg_image_url) {
+                                                                        echo "#";
+                                                                      } else {
+                                                                        echo $sl_button_link;
+                                                                      } ?>">
           <?php echo $sl_button_label ?>
         </a>
         <?php } ?>
       </div>
-      <div data-aos="fade-left" class="column  image-container <?php if ($sl_orientation == 'left') {
-                                                                  echo 'right';
-                                                                } else {
-                                                                  echo 'left';
-                                                                } ?>" id="<?php if (!$sl_graphic and !$sl_bg_image_url) {
-                                                                            echo 'without-graphic';
-                                                                          } else {
-                                                                            echo '';
-                                                                          } ?>">
-        <img src="<?php echo $sl_img_url; ?>" alt="<?php echo $sl_img_alt; ?>">
+      <div class="column  image-container <?php if ($sl_orientation == 'left') {
+                                            echo 'right';
+                                          } else {
+                                            echo 'left';
+                                          } ?>" id="<?php if (!$sl_graphic and !$sl_bg_image_url) {
+                                                      echo 'without-graphic';
+                                                    } else {
+                                                      echo '';
+                                                    } ?>">
+        <img data-aos="fade-left" src="<?php echo $sl_img_url; ?>" alt="<?php echo $sl_img_alt; ?>">
       </div>
     </div>
     <?php if ($sl_graphic) : ?>
-    <div data-aos="fade-right" class="stl-graphic">
+    <div class="stl-graphic">
       <?php get_template_part('template-parts/graphic/mountain'); ?>
     </div>
     <?php endif; ?>

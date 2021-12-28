@@ -30,33 +30,32 @@ if ($page_decoration) {
   <div class="content-wrapper  columns">
     <div class="column is-6 contact-info">
       <h3 class="titled is-capitalized mb-4"><?= $contact_info_title; ?></h3>
-      <p data-aos="fade-up-right">
+      <p>
         <a href="tel:<?php echo $phone; ?>">
           <?php get_template_part('template-parts/icon/icon-phone'); ?>
           <span class="ml-4"><?php echo $phone; ?></span>
         </a>
       </p>
-      <p data-aos="fade-up-right">
+      <p>
         <a href="mailto:<?php echo $email; ?>" target="_blank" rel="noopener noreferrer">
           <?php get_template_part('template-parts/icon/icon-email'); ?>
           <span class="ml-4"><?php echo $email; ?></span>
         </a>
       </p>
-      <p data-aos="fade-up-right">
+      <p>
         <a href="<?= $address_link; ?>">
           <?php get_template_part('template-parts/icon/icon-pin'); ?>
           <span class="ml-4 address"><?php echo $address ?></span>
         </a>
       </p>
-      <div data-aos="zoom-in" data-aos-delay="400" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
-        class="graphic-contact-page">
+      <div data-aos="fade-right" class="graphic-contact-page">
         <img src="<?= $deco_url; ?>" alt="<?= $deco_alt; ?>">
       </div>
     </div>
-    <div class="column is-6 contact-form-contact-page">
+    <div data-aos="fade-left" class="column is-6 contact-form-contact-page">
       <h2 class="subtitled is-capitalized"><?= $contact_subtitle; ?></h2>
       <h3 class="titled is-capitalized"><?= $contact_title; ?></h3>
-      <div data-aos="fade-up"><?php echo do_shortcode($shortcode); ?></div>
+      <div><?php echo do_shortcode($shortcode); ?></div>
     </div>
   </div>
 </section>

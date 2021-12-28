@@ -10,8 +10,8 @@
 
 <?php
 $post_id = get_field('business_info_id', 'option');
-$title = get_field('clients_section_title', $post_id);
-$subtitle = get_field('clients_section_subtitle', $post_id);
+$title = get_field('cs_title');
+$subtitle = get_field('cs_subtitle');
 
 //Get our clients posts
 $args = array(
@@ -22,7 +22,7 @@ $args = array(
 
 $clients = get_posts($args);
 ?>
-<section data-aos="fade-up" data-aos-duration="2000" class="our-clients-slider">
+<section class="our-clients-slider" data-aos="fade-up">
   <div class="has-text-centered ">
     <?php if ($title) : ?>
     <h3 class="italic-subtitle is-capitalized has-text-info-light">
@@ -39,14 +39,13 @@ $clients = get_posts($args);
           foreach ($clients as $client) : setup_postdata($client);
             $client_logo = get_the_post_thumbnail($client->ID);
             $client_link = get_field('client_link', $client->ID);
-            if ($client_link) :
-              $link_url = $client_link['url'];
-              $link_target = $client_link['target'] ? $client_link['target'] : '_blank';
-            endif;
+            // if ($client_link) :
+            //   $link_url = $client_link['url'];
+            //   $link_target = $client_link['target'] ? $client_link['target'] : '_blank';
+            // endif;
           ?>
           <li class="swiper-slide">
-            <a href="<?php echo esc_url($link_url); ?>" target=" <?php echo esc_attr($link_target); ?>"
-              rel="noreferrer noopener">
+            <a href="<?= $client_link; ?>" rel="noreferrer noopener">
 
               <figure class="image m-0">
                 <?php echo $client_logo; ?>

@@ -35,11 +35,11 @@ if ($image) {
     <div class="colum is-full-width" style="height:10vw;"></div>
     <div class="container">
       <div class="column py-6">
-        <div class="text-container">
-          <h3 data-aos="fade-right" data-aos-duration="1000" class="subheadline is-capitalized">
+        <div data-aos="fade-up" class="text-container">
+          <h3 class="subheadline is-capitalized">
             <span><?php echo $subheadline; ?></span>
           </h3>
-          <h1 data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500" class="my-3">
+          <h1 class="my-3">
             <span><?php echo $title; ?></span>
           </h1>
         </div>

@@ -25,7 +25,7 @@ if ($card_image) {
 
 ?>
 <section id="services" class="cards bg-image pb-extra-sm" style="background-image: url('<?php echo $card_url; ?>');">
-  <div data-aos="fade-up" data-aos-duration="2000" class="container content-wrapper has-text-centered">
+  <div data-aos="fade-up" class="container content-wrapper has-text-centered">
     <div class="card-title">
       <div>
         <?php get_template_part('template-parts/graphic/circle'); ?>

@@ -18,7 +18,7 @@ if (is_home()) {
 
 <section id="news-cards">
   <div class="container content-wrapper">
-    <h3 data-aos="fade-right" data-aos-duration="1000" class="italic-subtitle is-capitalized has-text-info-light">
+    <h3 class="italic-subtitle is-capitalized has-text-info-light">
       <?php echo $subheadline ?></h3>
     <h2 data-aos="fade-right" data-aos-duration="2000"><?php echo $headline ?></h2>
     <div class="is-flex is-flex-wrap-wrap is-justify-content-center">
@@ -35,11 +35,10 @@ if (is_home()) {
           $ns_button_link = get_sub_field('ns_button_link');
       ?>
 
-
-
       <div data-aos="fade-up" class="column news-card-article is-5 has-background-secondary m-4 text-overflow">
-        <img width="150px" src="<?= $url; ?>" alt="<?= $alt; ?>">
-        <h3 class="on-card is-capitalized mb-3"><?php echo $ns_subheadline; ?></h3>
+        <img width="110px" src="<?= $url; ?>" alt="<?= $alt; ?>">
+        <h4 class="italic-subtitle is-capitalized"><?= $ns_subheadline; ?></h4>
+        <h3 class="on-card is-capitalized mb-3"><?php echo $ns_title ?></h3>
         <p class="min-height-260"><?php echo $ns_excerpt; ?></p>
         <a class="is-uppercase" href="<?php echo $ns_button_link; ?>"><?php echo $ns_button_label; ?></a>
       </div>

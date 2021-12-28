@@ -8,8 +8,7 @@
 
 ?>
 
-<svg data-aos="fade-right" data-aos-duration="2000" data-aos-delay="500" xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 180.29 180.39">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180.29 180.39">
   <defs>
     <style>
     .cls-1 {
