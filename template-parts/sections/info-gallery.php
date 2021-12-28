@@ -45,7 +45,7 @@ if ($graphic) {
           <div class="column is-6">
             <img width="72px" src="<?= $logo_url ?>" alt="<?= $logo_alt ?>">
             <h3 class="titled is-capitalized mb-3"><?php echo $gallery_title; ?></h3>
-            <h4><?= $gallery_subtitle; ?></h4>
+            <h4 class="mb-1"><?= $gallery_subtitle; ?></h4>
             <p class="min-height-260"><?php echo $gallery_paragraph; ?></p>
           </div>
           <?php

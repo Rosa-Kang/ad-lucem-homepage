@@ -14,22 +14,45 @@
     padding-bottom: 24rem;
   }
 }
-.intro {
+//Intro with pb-extra
+section.intro.pb-extra {
+  .intro-graphic.right {
+    z-index: 0;
+    position: absolute;
+    left: 0%;
+    @include bp(tablet) {
+      right: 65%;
+    }
+    @include bp(desktop-1280) {
+      bottom: 34%;
+      left: 65%;
+    }
+  }
+}
+section.intro {
   position: relative;
-  .intro-graphic {
+  .intro-graphic.left.with-img {
+    position: unset;
     img {
-      position: absolute;
+      height: 250px;
+      margin-left: 70%;
       @include bp(tablet) {
-        width: 100%;
-        left: -50%;
-        bottom: -4rem;
+        margin-left: 0;
+        height: 350px;
       }
-
       @include bp(desktop-1280) {
-        width: 69%;
-        left: -25%;
-        bottom: -10rem;
+        height: 450px;
+        margin-left: 0;
       }
+    }
+    @include bp(tablet) {
+      position: absolute;
+      left: -196px;
+      bottom: -16%;
+    }
+    @include bp(desktop-1280) {
+      left: -225px;
+      bottom: -17%;
     }
   }
 
@@ -37,25 +60,33 @@
     margin-bottom: 16rem;
     position: relative;
   }
-  .intro-graphic {
+  .intro-graphic.right {
     z-index: 0;
     position: absolute;
-    bottom: -16%;
     left: 0%;
     @include bp(tablet) {
-      bottom: -16%;
-      right: 65%;
+      bottom: 4%;
+      left: 46%;
     }
     @include bp(desktop-1280) {
-      bottom: 4%;
-      left: 72%;
+      bottom: 8%;
+      left: 59%;
     }
   }
   .intro-graphic.left {
-    @include bp(desktop-1280) {
-      bottom: -5%;
-      left: -34%;
+    position: absolute;
+    bottom: 2%;
+    left: -12%;
+    @include bp(tablet) {
+      bottom: 5%;
+      left: -4%;
     }
+    @include bp(desktop-1280) {
+      bottom: 8%;
+    }
+  }
+  .intro-graphic.none {
+    display: none;
   }
 }
 
@@ -71,7 +102,7 @@ section#services .container {
     margin-top: -30vw;
   }
   @include bp(desktop-1280) {
-    margin-top: -31vw;
+    margin-top: -27vw;
   }
   @include bp(desktop-1440) {
     margin-top: -24rem;
@@ -252,14 +283,11 @@ section#orientation.bg-image {
     .stl-graphic {
       z-index: 0;
       position: absolute;
-      bottom: -24%;
       right: -18%;
       @include bp(tablet) {
-        bottom: -29%;
-        right: 38%;
+        right: 30%;
       }
       @include bp(desktop-1280) {
-        bottom: -32%;
         left: -6%;
       }
     }
@@ -285,7 +313,6 @@ section#orientation.bg-image {
 
 //section-contact-page &  Map
 .map {
-  height: 450px;
   position: relative;
   z-index: 9;
   -webkit-filter: grayscale(100%);
@@ -334,6 +361,11 @@ section#orientation.bg-image {
   }
 }
 
+div.wpforms-container-full .wpforms-form .wpforms-field-description,
+div.wpforms-container-full .wpforms-form .wpforms-field-limit-text {
+  display: none;
+}
+
 //News Articles section
 section#news-cards {
   position: relative;
@@ -354,4 +386,19 @@ section#news-cards {
       left: 57%;
     }
   }
+}
+
+//Past Event section : List Graphic
+ul.lg-items li {
+  font-family: $font__pre;
+}
+//List Columns
+.list-items ul li {
+  font-family: $font__pre;
+  margin-bottom: 5px;
+}
+
+//Section Orientation
+.text-content ul li {
+  font-family: $font__pre;
 }

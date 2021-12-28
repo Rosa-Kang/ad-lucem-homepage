@@ -48,7 +48,7 @@ body.page-speaking {
 }
 
 article .entry-meta {
-  margin-top: $mobile__menu-height;
+  margin-top: $space-unit--xs;
 }
 
 .content-wrapper {
@@ -216,7 +216,7 @@ p.schema-faq-answer {
 
 //Accordion section
 .accordion-pair {
-  width: 93%;
+  width: 100%;
   border-bottom: 1px solid $color__info-light;
 }
 .accordion-title {
@@ -245,12 +245,10 @@ p.schema-faq-answer {
 
     @include bp(desktop-1280) {
       content: '+ SHOW MORE';
-      right: 7%;
       font-size: 15px;
       line-height: 30px;
       font-style: italic;
       font-weight: $font__weight-semibold;
-      padding-right: 21px;
     }
   }
   &:hover:after {
@@ -271,12 +269,10 @@ p.schema-faq-answer {
     }
     @include bp(desktop-1280) {
       content: '- SHOW LESS';
-      right: 7%;
       font-size: 15px;
       line-height: 30px;
       font-style: italic;
       font-weight: $font__weight-semibold;
-      padding-right: 21px;
     }
   }
   &:hover:after {

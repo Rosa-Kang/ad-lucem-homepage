@@ -48,7 +48,7 @@ if ($sl_bg_image) {
         <h3 class="italic-subtitle is-capitalized has-text-info-light">
           <?php echo $sl_subheadline ?></h3>
         <h2><?php echo $sl_title ?></h2>
-        <span class="text-content"><?php echo $sl_content; ?></span>
+        <div class="text-content"><?php echo $sl_content; ?></div>
         <?php if ($sl_button_label) { ?>
         <a data-aos="fade-right" class="is-uppercase <?php if ($sl_bg_image_url) {
                                                           echo 'card-anchor show-modal-btn';

@@ -39,7 +39,7 @@ textarea {
   width: 100%;
   resize: none;
   height: 235px !important;
-  margin-bottom: $space-unit--lg !important;
+  margin-bottom: $base__space-unit !important;
   padding: $space-unit--xs $space-unit--s $space-unit--xs $space-unit--s !important;
   border: none !important;
   border-radius: 0 !important;
@@ -83,7 +83,8 @@ div.wpforms-container .wpforms-form .choices__placeholder {
   div.wpforms-container-full {
     margin-bottom: 0;
 
-    .wpforms-form input.wpforms-field-medium {
+    .wpforms-form input.wpforms-field-medium,
+    .choices.wpforms-field-row.wpforms-field-medium {
       max-width: unset;
     }
 
@@ -194,7 +195,8 @@ div.wpforms-container-full
 div#wpforms-57-field_1-container,
 div#wpforms-57-field_2-container,
 div#wpforms-57-field_3-container,
-div#wpforms-57-field_6-container {
+div#wpforms-57-field_6-container,
+div#wpforms-57-field_7-container {
   @media screen and (max-width: 767px) {
     width: 100% !important;
     margin-left: 0 !important;
@@ -228,5 +230,11 @@ form#wpforms-form-57 {
   .choices__item--selectable {
     text-align: left;
     font-family: $font__main;
+  }
+}
+.wpforms-form button[type='submit'] {
+  padding: 7px 15px !important;
+
+  &:hover {
   }
 }

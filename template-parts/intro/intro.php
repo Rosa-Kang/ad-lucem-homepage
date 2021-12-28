@@ -28,7 +28,7 @@ if ($intro_graphic) {
 <section class="intro <?= $pb_extra; ?> <?php if ($background_color == 'dark') {
                                           echo 'has-background-primary';
                                         }; ?>">
-  <div class=" container content-wrapper column is-8-widescreen is-7-desktop">
+  <div class=" container-m content-wrapper column">
     <div class="has-text-centered mb-6">
       <h3 class="italic-subtitle is-capitalized has-text-info-light">
         <?php echo $intro_subheadline ?>
@@ -40,10 +40,7 @@ if ($intro_graphic) {
         <?php echo $intro_button_label ?>
       </a>
     </div>
-    <div data-aos="fade-left" class="intro-graphic
-    <?php if ($graphic_orientation == 'left') {
-      echo 'left';
-    } ?>
+    <div data-aos="fade-left" class=" intro-graphic <?= $graphic_orientation; ?> <?php if ($intro_graphic) : ?> <?= 'with-img'; ?>  <?php else : ?> <?= '' ?> <?php endif; ?>
     ">
       <?php if ($intro_graphic) : ?>
       <img src="<?= $url; ?>" alt="<? $alt; ?>">

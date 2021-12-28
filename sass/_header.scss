@@ -66,6 +66,9 @@
       color: #ffffff;
       font-size: 15px;
       line-height: 20px;
+      &:hover {
+        color: $color__info-light;
+      }
     }
   }
 }
