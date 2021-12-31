@@ -21,11 +21,14 @@ if ($graphic) {
 <section class="info-gallery">
   <div class="container content-wrapper">
     <div class="columns">
-      <div class="column is-full-mobile is-7-desktop info-container">
-        <h3 class="italic-subtitle is-capitalized has-text-info-light">
-          <?php echo $subtitle ?></h3>
-        <h2><?php echo $title ?></h2>
-        <div class="columns is-flex-wrap-wrap is-justify-content-center p-2">
+      <div class="column is-full-mobile is-10-desktop info-container">
+        <div class="column is-8-desktop">
+          <h3 class="italic-subtitle is-capitalized has-text-info-light">
+            <?php echo $subtitle ?></h3>
+          <h2 class=""><?php echo $title ?></h2>
+        </div>
+
+        <div class="columns is-flex-wrap-wrap is-justify-content-flex-start p-2">
           <?php
           // Check rows exists.
           if (have_rows('info_content')) :
@@ -42,9 +45,9 @@ if ($graphic) {
               }
               // Do something...
           ?>
-          <div class="column is-6">
+          <div data-aos="fade-up" data-aos-delay="200" class="column is-5 mr-2">
             <img width="72px" src="<?= $logo_url ?>" alt="<?= $logo_alt ?>">
-            <h3 class="titled is-capitalized mb-3"><?php echo $gallery_title; ?></h3>
+            <h3 class="titled is-capitalized mb-3 mr-4"><?php echo $gallery_title; ?></h3>
             <h4 class="mb-1"><?= $gallery_subtitle; ?></h4>
             <p class="min-height-260"><?php echo $gallery_paragraph; ?></p>
           </div>
@@ -56,7 +59,7 @@ if ($graphic) {
           // Do something...
           endif; ?>
         </div>
-        <div class="info-gallery-graphic column is-5">
+        <div data-aos="fade-up" data-aos-delay="200" class="info-gallery-graphic column is-6">
           <img src="<?= $graphic_url; ?>" alt="<?= $graphic_alt; ?>">
         </div>
       </div>

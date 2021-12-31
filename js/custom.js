@@ -135,13 +135,14 @@
 
       $(modalId).click(function () {
         $('[data-modal="' + $(this).attr('id') + '"]').addClass('is-active');
+        $('.modal-first-div').addClass('modal-background');
       });
     });
 
     // Close Modal
     $('.modal-close').click(function () {
       $('.modal').removeClass('is-active');
-    });
-    // End of Modals ----------------
+      $('.modal-first-div').removeClass('modal-background');
+    }); //End of Modals ----------------
   }); // End of Doc Ready -------------------
 })(jQuery);

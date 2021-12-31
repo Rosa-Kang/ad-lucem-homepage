@@ -17,8 +17,8 @@ if (is_home()) {
 ?>
 
 <section id="news-cards">
-  <div class="container content-wrapper">
-    <h3 class="italic-subtitle is-capitalized has-text-info-light">
+  <div class="container is-multiline content-wrapper ">
+    <h3 data-aos="fade-up" class="italic-subtitle is-capitalized has-text-info-light">
       <?php echo $subheadline ?></h3>
     <h2 data-aos="fade-right" data-aos-duration="2000"><?php echo $headline ?></h2>
     <div class="is-flex is-flex-wrap-wrap is-justify-content-center">
@@ -35,7 +35,8 @@ if (is_home()) {
           $ns_button_link = get_sub_field('ns_button_link');
       ?>
 
-      <div data-aos="fade-up" class="column news-card-article is-5 has-background-secondary m-4 text-overflow">
+      <div data-aos="fade-up"
+        class="column news-card-article is-5 is-full-mobile has-background-secondary m-4 text-overflow">
         <img width="110px" src="<?= $url; ?>" alt="<?= $alt; ?>">
         <h4 class="italic-subtitle is-capitalized"><?= $ns_subheadline; ?></h4>
         <h3 class="on-card is-capitalized mb-3"><?php echo $ns_title ?></h3>
@@ -49,7 +50,9 @@ if (is_home()) {
 
       endif;
       ?>
-      <a data-aos="fade-up" href="#" class="news-article-show-more button is-primary my-6 is-uppercase">Show More</a>
+      <div class="show-more has-text-centered my-6">
+        <a data-aos="fade-up" href="#" class="news-article-show-more button is-primary my-6 is-uppercase">Show More</a>
+      </div>
     </div>
   </div>
   <div data-aos="fade-left" data-aos-duration="2000" class="news-article-graphic">

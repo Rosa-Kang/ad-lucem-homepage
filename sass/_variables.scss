@@ -35,8 +35,8 @@ $color__success-invert: #005148; //emerald
 // $color__success-light:;
 $color__success-dark: #003462; //Dusk
 /*** ACCENT ***/
-$color__info: #efaf42; ///Brass
-// $color__info-invert: #a4d8cf;
+$color__info: #b1702b; ///Brass
+$color__info-invert: #53647e;
 $color__info-light: #fbad18; // Sun Ray button-light
 $color__info-dark: #003462; //button-dark
 $color__overlay: rgba(49, 49, 51, 0.25);
@@ -76,7 +76,7 @@ $text__shadow: 0px 3px 1px rgba(65, 64, 66, 0.2);
 $dim: 0.66;
 $transition: all 0.3s ease-in-out;
 $text-shadow: 1px 2px 3px #292a2f80;
-$box-shadow--1: 0px 3px 6px #00000029;
+$box-shadow--1: rgba(41, 42, 47, 0.16) 0px 1px 0px 0px;
 $box-shadow--2: 0px 3px 6px rgba(0, 0, 0, 0.16);
 $box-shadow--3: 0px 3px 4px rgba(0, 0, 0, 0.1);
 $box-shadow--4: 0px 5px 6px rgba(0, 0, 0, 0.2);

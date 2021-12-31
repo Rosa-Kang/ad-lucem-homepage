@@ -8,7 +8,7 @@ section {
 }
 
 body.home,
-body.page-about,
+body.page,
 body.page-speaking {
   .bg-image {
     background-repeat: no-repeat;
@@ -144,6 +144,10 @@ section.sticky-background.bg-image {
 
 .sticky-background {
   background-attachment: fixed;
+  background-size: cover;
+  @supports (-webkit-overflow-scrolling: touch) {
+    background-attachment: scroll;
+  }
 }
 
 .normal-background {
@@ -153,7 +157,7 @@ section.sticky-background.bg-image {
   @include bp(tablet) {
     margin-top: -11rem;
   }
-  @include bp(desktop-1280) {
+  @include bp(desktop) {
     margin-top: -12rem;
   }
 }
@@ -171,7 +175,7 @@ section.info-gallery {
 
     @include bp(desktop-1280) {
       top: -7%;
-      right: -18%;
+      right: -21%;
     }
     img {
       width: 400px;
@@ -202,6 +206,7 @@ section.info-gallery {
 .schema-faq-section.faq-opened::after {
   content: url('/wp-content/themes/ad-lucem/assets/svg/arrow-up.svg');
   position: absolute;
+  transition: 0.3s;
   top: 0;
   right: 0;
 }
@@ -263,6 +268,7 @@ p.schema-faq-answer {
   &::after {
     content: url('/wp-content/themes/ad-lucem/assets/svg/arrow-up.svg');
     position: absolute;
+    transition: 0.3s;
     right: 5%;
     @include bp(tablet) {
       right: 0%;

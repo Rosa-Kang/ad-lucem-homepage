@@ -286,6 +286,7 @@ li#menu-item-455.focus > a {
     padding-left: 3px;
     content: url('/wp-content/themes/ad-lucem/assets/svg/arrow-light-up.svg');
     position: absolute;
+    transition: 0.3s;
     color: #fffaf4;
   }
 }
@@ -385,18 +386,6 @@ li#menu-item-455.focus > a {
   }
   li {
     position: relative;
-
-    // &:hover:after {
-    //   position: absolute;
-    //   content: '';
-    //   height: 2px;
-    //   bottom: -6px;
-    //   margin: 0 auto;
-    //   left: 0;
-    //   right: 0;
-    //   width: 13px;
-    //   background: $color__info-light;
-    // }
   }
 }
 
