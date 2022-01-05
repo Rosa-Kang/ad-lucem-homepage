@@ -238,3 +238,17 @@ form#wpforms-form-57 {
   &:hover {
   }
 }
+div.wpforms-container .wpforms-form .choices[data-type*='select-one']:after {
+  content: url('/wp-content/themes/ad-lucem/assets/svg/arrow-grey-down.svg') !important;
+  border: none !important;
+  top: 31% !important;
+  left: 80px;
+  right: unset !important;
+}
+
+div.wpforms-container
+  .wpforms-form
+  .choices[data-type*='select-one'].is-open:after {
+  content: url('/wp-content/themes/ad-lucem/assets/svg/arrow-grey-up.svg') !important;
+  transition: 0.3s;
+}

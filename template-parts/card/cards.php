@@ -25,7 +25,7 @@ if ($card_image) {
 
 ?>
 <section id="services" class="cards bg-image pb-extra-sm" style="background-image: url('<?php echo $card_url; ?>');">
-  <div data-aos="fade-up" class="container content-wrapper has-text-centered">
+  <div class="container content-wrapper has-text-centered">
     <div class="card-title">
       <div>
         <?php get_template_part('template-parts/graphic/circle'); ?>
@@ -46,7 +46,7 @@ if ($card_image) {
           $content_link = get_sub_field('content_btn_link');
           // Do something...
       ?>
-      <div class="column is-4 has-background-secondary m-3 text-overflow">
+      <div data-aos="fade-up" data-aos-delay="200" class="column is-4 has-background-secondary m-3 text-overflow">
         <h3 class="on-card is-capitalized mb-3"><?php echo $content_title; ?></h3>
         <p class="min-height-260"><?php echo $content_paragraph; ?></p>
         <a class="is-uppercase card-anchor" href="<?php echo $content_link; ?>"><?php echo $content_button; ?></a>

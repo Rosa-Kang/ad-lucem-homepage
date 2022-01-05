@@ -41,7 +41,7 @@ section.intro {
         height: 350px;
       }
       @include bp(desktop-1280) {
-        height: 450px;
+        height: 387px;
         margin-left: 0;
       }
     }
@@ -52,7 +52,7 @@ section.intro {
     }
     @include bp(desktop-1280) {
       left: -225px;
-      bottom: -17%;
+      bottom: 0%;
     }
   }
 
@@ -75,7 +75,6 @@ section.intro {
   }
   .intro-graphic.left {
     position: absolute;
-    bottom: 2%;
     left: -12%;
     @include bp(tablet) {
       bottom: 5%;
@@ -110,10 +109,10 @@ section#services .container {
 }
 
 .pb-extra-sm {
-  padding-bottom: 28rem;
+  padding-bottom: 20rem;
 
   @include bp(tablet) {
-    padding-bottom: 20vw;
+    padding-bottom: 12rem;
   }
   @include bp(desktop-1080) {
     padding-bottom: 23rem;
@@ -121,6 +120,29 @@ section#services .container {
 }
 
 //Section Modal
+.modal {
+  display: block;
+  transform: translate(0, 100%);
+  transition: transform 0.3s;
+  .modal-card {
+    max-height: calc(100vh - 20px);
+    width: 95%;
+    @include bp(tablet) {
+      width: 58vw !important;
+    }
+    .modal-card-body-inner-px {
+      @include bp(desktop-1280) {
+        padding: 0 2.5rem;
+      }
+    }
+  }
+}
+
+.modal.is-active {
+  transform: translate(0, 0%);
+  transition: transform 0.3s;
+}
+
 .modal-card {
   margin-top: 131px;
   margin-bottom: 109px;
@@ -152,11 +174,15 @@ section#services .container {
 //Orientation with bg-image
 section#orientation.bg-image {
   margin-bottom: 0;
-  .container {
+  .columns.orientation-contents {
+    margin-top: 0;
     @include bp(tablet) {
+      margin-top: -50px;
       padding-bottom: 0;
     }
-    margin-top: 0;
+    @include bp(desktop-1280) {
+      margin-top: -69px;
+    }
     .text-container {
       .text-content {
         p {
@@ -179,6 +205,7 @@ section#orientation.bg-image {
       img {
         height: 100%;
         width: auto;
+
         @include bp(tablet) {
           height: 517px;
           margin: -10rem 3rem 0 0;
@@ -193,103 +220,100 @@ section#orientation.bg-image {
 }
 
 //Orientation w/o bg-image
-section#orientation.bg-image {
-  margin-top: 10rem;
-  @include bp(desktop-1280) {
+section#orientation {
+  position: relative;
+  .columns.orientation-contents.zero {
     margin-top: 0;
   }
-}
-.section-orientation {
-  margin-bottom: 10vw;
-  position: relative;
-  @include bp(tablet) {
-    margin-bottom: 0;
-  }
-  .is-flex {
-    width: 95%;
-    margin: 0 auto;
+  .columns.orientation-contents {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin-top: -202px;
     @include bp(tablet) {
       flex-direction: row;
-      width: 100%;
+      justify-content: space-between;
+      margin-top: -172px;
     }
-  }
-  .left {
-    order: 2;
-    margin-top: 36px;
-    @include bp(tablet) {
+    @include bp(desktop-1280) {
+      margin-top: -202px;
+    }
+    @include bp(desktop-1920) {
+      margin-top: -230px;
+    }
+    .left {
+      @include bp(tablet) {
+        order: 1 !important;
+      }
+    }
+    .right {
+      @include bp(tablet) {
+        order: 2 !important;
+      }
+    }
+    .column.image-container.top {
       order: 1;
-      margin-top: 0;
     }
-  }
-  .right {
-    order: 1;
-    @include bp(tablet) {
+    .column.text-container .top {
+      order: 1;
+    }
+    .column.text-container.bottom {
       order: 2;
     }
-  }
-  .container {
-    position: relative;
-    padding-top: 0;
-    .columns {
-      .left {
-        @include bp(desktop) {
-          height: 100%;
-          width: 60%;
-          object-fit: cover;
-        }
-      }
-
-      .image-container.left {
-        img {
-          margin: 0;
+    .column.image-container.bottom {
+      order: 2;
+    }
+    .image-container.right {
+      text-align: right;
+    }
+    .image-container.left {
+      text-align: left;
+    }
+    .text-container {
+      .text-content {
+        p {
           @include bp(tablet) {
-            margin: 0 3rem 0 0;
-          }
-        }
-      }
-
-      .image-container {
-        img {
-          margin-top: -11rem;
-          height: 319px;
-          width: auto;
-          object-fit: cover;
-          @include bp(tablet) {
-            width: auto;
-            height: 30rem;
-            margin: -11rem 0 0 1rem;
+            width: 365px;
           }
           @include bp(desktop-1280) {
-            width: 85%;
-            height: 34rem;
-            margin-left: 3rem;
-            margin-top: -15rem;
+            width: 472px;
           }
-        }
-      }
-      div#without-graphic img {
-        // margin-top: -5rem;
-        @include bp(tablet) {
-          margin-top: 1rem;
-        }
-        @include bp(desktop-1280) {
-          margin-top: 0rem;
         }
       }
     }
-    .stl-graphic {
-      z-index: 0;
-      position: absolute;
-      right: -18%;
-      @include bp(tablet) {
-        right: 30%;
+    .image-container {
+      img {
+        height: 319px;
+        width: auto;
+        object-fit: cover;
+        @include bp(tablet) {
+          height: 425px;
+        }
+        @include bp(desktop-1280) {
+          height: 540px;
+          width: 435px;
+        }
       }
-      @include bp(desktop-1280) {
-        left: -6%;
-      }
+    }
+  }
+
+  div#without-graphic img {
+    @include bp(tablet) {
+      margin-top: 1rem;
+    }
+    @include bp(desktop-1280) {
+      margin-top: 0rem;
+    }
+  }
+  .stl-graphic {
+    z-index: 0;
+    position: absolute;
+    right: -38%;
+    @include bp(tablet) {
+      left: -7%;
+    }
+    @include bp(desktop-1280) {
+      left: -6%;
+      bottom: -8%;
     }
   }
 }
@@ -343,8 +367,9 @@ section#orientation.bg-image {
     input,
     textarea,
     select,
-    .choices__inner {
-      box-shadow: $box_shadow;
+    .choices {
+      box-shadow: $box-shadow--1 !important;
+      -webkit-appearance: none;
       &::placeholder {
         font-family: $font__pre;
       }
@@ -374,15 +399,13 @@ section#news-cards {
   }
   .news-article-graphic {
     position: absolute;
-    bottom: -2%;
+    bottom: 0%;
     left: -2%;
 
     @include bp(tablet) {
-      bottom: -12%;
       left: 42%;
     }
     @include bp(desktop-1280) {
-      bottom: -14%;
       left: 57%;
     }
   }

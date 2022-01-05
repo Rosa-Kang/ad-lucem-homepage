@@ -43,18 +43,18 @@
     }); // End of Accordion Repeater -------------------
 
     //Header-Menu Arrow-Down on mouse-hover
-    $('#menu-item-360').children('a').addClass('menu-folded');
-    $('#menu-item-455').children('a').addClass('menu-folded');
-    $('#menu-item-360').hover(
-      function () {
-        $(this).children('a').removeClass('menu-folded');
-        $(this).children('a').addClass('menu-unfolded');
-      },
-      function () {
-        $(this).children('a').removeClass('menu-unfolded');
-        $(this).children('a').addClass('menu-folded');
-      }
-    );
+    // $('#menu-item-360').children('a').addClass('menu-folded');
+    // $('#menu-item-455').children('a').addClass('menu-folded');
+    // $('#menu-item-360').hover(
+    //   function () {
+    //     $(this).children('a').removeClass('menu-folded');
+    //     $(this).children('a').addClass('menu-unfolded');
+    //   },
+    //   function () {
+    //     $(this).children('a').removeClass('menu-unfolded');
+    //     $(this).children('a').addClass('menu-folded');
+    //   }
+    // );
 
     //--------end of Menu hover
 
@@ -126,22 +126,23 @@
     }); //End of Article Show more
 
     // Start of Modals -----------------
-    $('.modal').each(function (i) {
-      var modalContainerId = $(this).attr('data-modal', 'modal-' + (i + 1));
-    });
+    // $('.modal').each(function (i) {
+    //   var modalContainerId = $(this).attr('data-modal', 'modal-' + (i + 1));
+    // });
 
     $('.show-modal-btn').each(function (i) {
       var modalId = $(this).attr('id', 'modal-' + (i + 1));
 
       $(modalId).click(function () {
         $('[data-modal="' + $(this).attr('id') + '"]').addClass('is-active');
+        $('.modal-first-div').addClass('modal-background');
       });
     });
 
     // Close Modal
     $('.modal-close').click(function () {
       $('.modal').removeClass('is-active');
-    });
-    // End of Modals ----------------
+      $('.modal-first-div').removeClass('modal-background');
+    }); //End of Modals ----------------
   }); // End of Doc Ready -------------------
 })(jQuery);

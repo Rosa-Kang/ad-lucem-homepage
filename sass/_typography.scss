@@ -37,7 +37,7 @@ i {
   font-style: italic;
 }
 section li {
-  line-height: 2;
+  line-height: 1.8;
 }
 
 blockquote {
@@ -121,6 +121,11 @@ h1.has-text-dark {
 
 .text-shadow-none {
   text-shadow: none;
+}
+
+h2#dark-h2 {
+  font-size: 35px;
+  line-height: 52px;
 }
 
 h2,

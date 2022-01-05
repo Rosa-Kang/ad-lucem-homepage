@@ -28,7 +28,7 @@ if ($page_decoration) {
 ?>
 <section class="section-contact container">
   <div class="content-wrapper  columns">
-    <div class="column is-6 contact-info">
+    <div data-aos="fade-up" class="column is-6 contact-info">
       <h3 class="titled is-capitalized mb-4"><?= $contact_info_title; ?></h3>
       <p>
         <a href="tel:<?php echo $phone; ?>">

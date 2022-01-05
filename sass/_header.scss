@@ -185,6 +185,18 @@
     transform: translateX(100%);
     transition: transform ease-out 0.3s;
   }
+  #popout.show {
+    -webkit-transform: translateY(0) !important;
+    transform: translateY(0) !important;
+    transition: transform 0.3s;
+    width: 100%;
+
+    .popout-menu {
+      @include bp(tablet) {
+        padding-right: 2.5rem !important;
+      }
+    }
+  }
 }
 
 .dimmed {
@@ -271,22 +283,69 @@ li#menu-item-353 {
 li#menu-item-360 > a {
   padding-right: 1rem;
 }
-
-a.menu-folded {
+li.menu-item-has-children.focus > a {
+  color: $color__info !important;
+}
+li.menu-item-has-children {
+  position: relative;
+  flex-wrap: wrap;
+  padding: 0.25rem 2.01rem 0.25rem 1.005rem;
   &::after {
-    content: url('/wp-content/themes/ad-lucem/assets/svg/arrow-light-down.svg');
+    content: '';
+    display: inline-block;
     position: absolute;
-    padding-left: 3px;
+    right: 16px;
+    bottom: 4px;
+    background: url('/wp-content/themes/ad-lucem/assets/svg/arrow-light-down.svg')
+      50% / contain no-repeat;
+    width: 10px;
+    height: 10px;
+  }
+  &:hover {
+    color: $color__info;
+
+    a {
+      color: $color__info;
+    }
+
+    .arrow-down {
+      fill: $color__info;
+    }
+
+    &:after {
+      content: '';
+      color: white;
+      background: url('/wp-content/themes/ad-lucem/assets/svg/arrow-light-up.svg')
+        50% / contain no-repeat;
+      transition: $transition;
+    }
   }
 }
-
-a.menu-unfolded,
-li#menu-item-455.focus > a {
+ul#mobile-menu li.menu-item-has-children {
   &::after {
-    padding-left: 3px;
-    content: url('/wp-content/themes/ad-lucem/assets/svg/arrow-light-up.svg');
-    position: absolute;
-    color: #fffaf4;
+    content: '';
+    background: url('/wp-content/themes/ad-lucem/assets/svg/arrow-light-down.svg')
+      50% / contain no-repeat;
+    right: -12px;
+    top: 28px;
+    bottom: unset;
+  }
+  &:hover::after {
+    content: '';
+    background: url('/wp-content/themes/ad-lucem/assets/svg/arrow-mlight-up.svg')
+      50% / contain no-repeat;
+    transform: rotate(180deg);
+  }
+}
+ul#mobile-menu li.menu-item-has-children.arrow-is-open {
+  &::after {
+    content: '';
+    background: url('/wp-content/themes/ad-lucem/assets/svg/arrow-mlight-up.svg')
+      50% / contain no-repeat;
+    right: -12px;
+    top: 28px;
+    transform: rotate(0deg);
+    bottom: unset;
   }
 }
 
@@ -385,18 +444,6 @@ li#menu-item-455.focus > a {
   }
   li {
     position: relative;
-
-    // &:hover:after {
-    //   position: absolute;
-    //   content: '';
-    //   height: 2px;
-    //   bottom: -6px;
-    //   margin: 0 auto;
-    //   left: 0;
-    //   right: 0;
-    //   width: 13px;
-    //   background: $color__info-light;
-    // }
   }
 }
 

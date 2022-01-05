@@ -9,14 +9,14 @@
 (function ($) {
   $(function () {
     // Start of Testimonial Swiper --------------------
-    var testimonialSwiper = new Swiper('.testimonialSwiper', {
-      loop: true,
-      slidesPerView: 1,
-      navigation: {
-        nextEl: '.testimonial-btn-next',
-        prevEl: '.testimonial-btn-prev',
-      },
-    });
+    // var testimonialSwiper = new Swiper('.testimonialSwiper', {
+    //   loop: true,
+    //   slidesPerView: 1,
+    //   navigation: {
+    //     nextEl: '.testimonial-btn-next',
+    //     prevEl: '.testimonial-btn-prev',
+    //   },
+    // });
     // End of Testimonial Swiper ----------------------
 
     // Start of Our Clients Slider --------------------

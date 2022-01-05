@@ -19,12 +19,12 @@ if ($background) {
 ?>
 <section class="callout-bottom has-background-primary bg-image"
   style="background-image: url('<?php echo $bg_url; ?>');">
-  <div class="container content-wrapper">
+  <div data-aos="fade-up" class="container content-wrapper">
     <div class="columns">
       <div class="column is-7">
         <h3 class="py-2 italic-subtitle is-capitalized has-text-info-light">
           <?php echo $subtitle ?></h3>
-        <h2 class="py-2" id="dark-h2">
+        <h2 class="py-2">
           <?php echo $title ?></h2>
         <p class="py-2"><?php echo $content ?></p>
       </div>

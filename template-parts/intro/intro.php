@@ -33,7 +33,7 @@ if ($intro_graphic) {
       <h3 class="italic-subtitle is-capitalized has-text-info-light">
         <?php echo $intro_subheadline ?>
       </h3>
-      <h2 id="dark-h2"><?php echo $intro_title ?></h2>
+      <h2><?php echo $intro_title ?></h2>
       <p class="has-text-left px-4">
         <?php echo $intro_content ?></p>
       <a data-aos="fade-right" class="button is-uppercase is-primary" href="<?php echo $intro_button_link ?>">

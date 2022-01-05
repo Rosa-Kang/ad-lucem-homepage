@@ -19,9 +19,9 @@ $content = custom_excerpt(26);
 
 <section id="primary" class="container is-multiline content-wrapper is-flex is-justify-content-center">
   <div class="blog-article-wrapper">
-    <h3 class="italic-subtitle is-capitalized has-text-info-light">
+    <h3 data-aos="fade-up" class="italic-subtitle is-capitalized has-text-info-light">
       In the news</h3>
-    <h2>Our Blog</h2>
+    <h2 data-aos="fade-right">Our Blog</h2>
     <div class="is-flex is-flex-wrap-wrap is-justify-content-center">
       <?php if (have_posts()) :
         while (have_posts()) : the_post(); ?>

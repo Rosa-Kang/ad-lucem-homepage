@@ -8,32 +8,51 @@
   $(function () {
     // Start of Popout Menu -------------------------
     $('#menu-bars').click(function () {
-      $('.dimmed').fadeIn(200);
-      $('#popout').css({
-        '-webkit-transform': 'translateX(0)',
-        transform: 'translateX(0)',
-      });
+      $(this).toggleClass('toggled');
+      if ($(this).hasClass('toggled')) {
+        $(this).addClass('change');
+        $('#popout').addClass('show');
+        $(this).removeClass('toggled');
+      } else {
+        $(this).removeClass('change');
+        $('#popout').removeClass('show');
+      }
     });
 
     // Detect click outside mobile menu
     $(document).mouseup(function (e) {
       var menu = $('.popout-menu');
       if (!menu.is(e.target) && menu.has(e.target).length === 0) {
-        $('.dimmed').fadeOut(200);
-        $('#popout').css({
-          '-webkit-transform': 'translateX(100%)',
-          transform: 'translateX(100%)',
-        });
+        $('#popout').removeClass('show');
+        $('#menu-bars').removeClass('change');
+        $('#mobile-menu .sub-menu')
+          .not($(this).next())
+          .not($(this).children())
+          .slideUp('fast')
+          .removeClass('open');
+        $('.menu-item-has-children').removeClass('arrow-is-open');
       }
     });
-
-    $('#close-popout').click(function () {
-      $('.dimmed').fadeOut(200);
-      $('#popout').css({
-        '-webkit-transform': 'translateX(100%)',
-        transform: 'translateX(100%)',
-      });
+    $('.mobile-menu-btn').click(function () {
+      // Display submenu
+      $(this).prev('sub-menu').css('left', 'auto');
     });
+    $('#mobile-menu.menu')
+      .find('.menu-item-has-children')
+      .click(function () {
+        if ($(this).hasClass('arrow-is-open')) {
+          $(this).removeClass('arrow-is-open');
+          $(this).children('ul').toggleClass('open').slideToggle('fast');
+        } else {
+          $(this).addClass('arrow-is-open');
+          $(this).children('ul').toggleClass('open').slideToggle('fast');
+          // $('.sub-menu')
+          //   .not($(this).next())
+          //   .not($(this).children())
+          //   .slideUp('fast')
+          //   .removeClass('open');
+        }
+      });
     // End of Popout Menu -----------------------
 
     // Start of Animate on Scroll ---------------------
@@ -57,4 +76,12 @@
     });
     // End of Animate on Scroll ----------------------
   }); // end of doc ready
+
+  $('#menu-item-360 ul.sub-menu').hover(function () {
+    if ($('#menu-item-360').hasClass('focus')) {
+      $('#menu-item-360').removeClass('focus');
+    } else {
+      $('#menu-item-360').addClass('focus');
+    }
+  });
 })(jQuery);
